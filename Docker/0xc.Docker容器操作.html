@@ -1,0 +1,634 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0xc.Docker容器操作 · 工程师笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cn-xiao">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0xd.Docker仓库.html" />
+    
+    
+    <link rel="prev" href="0xb.Docker镜像操作.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="0xa.Docker安装.html">
+            
+                <a href="0xa.Docker安装.html">
+            
+                    
+                    0xa.Docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="0xb.Docker镜像操作.html">
+            
+                <a href="0xb.Docker镜像操作.html">
+            
+                    
+                    0xb.Docker镜像操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.3" data-path="0xc.Docker容器操作.html">
+            
+                <a href="0xc.Docker容器操作.html">
+            
+                    
+                    0xc.Docker容器操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="0xd.Docker仓库.html">
+            
+                <a href="0xd.Docker仓库.html">
+            
+                    
+                    0xd.Docker仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="0xe.Docker数据卷.html">
+            
+                <a href="0xe.Docker数据卷.html">
+            
+                    
+                    0xe.Docker数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="0xf.Docker端口映射.html">
+            
+                <a href="0xf.Docker端口映射.html">
+            
+                    
+                    0xf.Docker端口映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="0xg.Dockerfile保你会.html">
+            
+                <a href="0xg.Dockerfile保你会.html">
+            
+                    
+                    0xg.Dockerfile保你会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="0xh.Docker_Compose.html">
+            
+                <a href="0xh.Docker_Compose.html">
+            
+                    
+                    0xh.Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="0xi.Docker_Machine.html">
+            
+                <a href="0xi.Docker_Machine.html">
+            
+                    
+                    0xi.Docker Machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="0xj.Docker_Swarm.html">
+            
+                <a href="0xj.Docker_Swarm.html">
+            
+                    
+                    0xj.Docker Swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="0xa.Docker三剑客常用命令.md">
+            
+                <span>
+            
+                    
+                    0xk.Docker三剑客常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >0xc.Docker容器操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x5BB9;&#x5668;">&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x5BB9;&#x5668;</h2>
+<p>&#x3000;&#x3000;&#x5BB9;&#x5668;&#x662F; Docker &#x53E6;&#x4E00;&#x4E2A;&#x6838;&#x5FC3;&#x7684;&#x6982;&#x5FF5;&#xFF0C;&#x7B80;&#x5355;&#x6765;&#x8BF4;&#xFF0C;&#x5BB9;&#x5668;&#x662F;&#x955C;&#x50CF;&#x7684;&#x4E00;&#x4E2A;&#x8FD0;&#x884C;&#x5B9E;&#x4F8B;&#xFF0C;&#x6240;&#x4E0D;&#x540C;&#x7684;&#x662F;&#xFF0C;&#x955C;&#x50CF;&#x662F;&#x9759;&#x6001;&#x7684;&#x53EA;&#x8BFB;&#x6587;&#x4EF6;&#xFF0C;&#x800C;&#x5BB9;&#x5668;&#x5E26;&#x6709;&#x8FD0;&#x884C;&#x65F6;&#x9700;&#x8981;&#x7684;&#x53EF;&#x5199;&#x6587;&#x4EF6;&#x5C42;</p>
+<h4 id="11-&#x65B0;&#x5EFA;&#x5BB9;&#x5668;">1.1. &#x65B0;&#x5EFA;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker create &#x547D;&#x4EE4;&#x6765;&#x65B0;&#x5EFA;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+docker.io/centos    latest              5182e96772bf        6 weeks ago         200 MB
+[root@rsync131 ~]<span class="hljs-comment"># docker create centos</span>
+b9dd06b5dcba561b178b1892631<span class="hljs-built_in">cd</span>318f0babd4a9a3f067761963a6ab61fe078
+[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+b9dd06b5dcba        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         9 seconds ago       Created                                 sleepy_sammet
+</code></pre>
+<h4 id="12-&#x542F;&#x52A8;&#x5BB9;&#x5668;">1.2. &#x542F;&#x52A8;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker start &#x547D;&#x4EE4;&#x6765;&#x542F;&#x52A8;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker start b9dd06b5dcba</span>
+b9dd06b5dcba
+[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                     PORTS               NAMES
+b9dd06b5dcba        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         About a minute ago   Exited (0) 4 seconds ago                       sleepy_sammet
+</code></pre>
+<p>&#x3000;&#x3000;PS: &#x4E0D;&#x77E5;&#x9053;&#x4E3A;&#x4EC0;&#x4E48;&#x6211;&#x4F7F;&#x7528;&#x8FD9;&#x6837;&#x7684;&#x65B9;&#x5F0F;&#x662F;&#x542F;&#x52A8;&#x4E0D;&#x4E86;&#x5BB9;&#x5668;&#x7684;&#xFF0C;&#x5F85;&#x89E3;&#x91CA;</p>
+<h4 id="13-&#x65B0;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x5BB9;&#x5668;">1.3. &#x65B0;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x4E00;&#x822C;&#x5728;&#x521B;&#x5EFA;&#x5BB9;&#x5668;&#x7684;&#x662F;&#x6211;&#x4EEC;&#x4E0D;&#x4F1A;&#x4F7F;&#x7528;&#x4E0A;&#x9762;&#x7684;&#x4E24;&#x6B65;&#x7684;&#x65B9;&#x5F0F;&#x6765;&#x8FDB;&#x884C;&#x521B;&#x5EFA;&#xFF0C;&#x6709;&#x4E2A;&#x66F4;&#x7B80;&#x5355;&#x7684;&#x65B9;&#x5F0F;&#x5C31;&#x662F;&#x5728;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x76F4;&#x63A5;&#x542F;&#x52A8;</p>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker run &#x547D;&#x4EE4;&#xFF0C;&#x521B;&#x5EFA;&#x5E76;&#x542F;&#x52A8;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker run -it -d --name test_centos centos</span>
+159a08c11fece853626516ab94b401464efd85d69c1f88706ec17a29178fee54
+[root@rsync131 ~]<span class="hljs-comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         3 seconds ago       Up 3 seconds                            <span class="hljs-built_in">test</span>_centos
+
+
+docker run&#xFF1A;&#x6B7B;&#x547D;&#x4EE4;
+-i&#xFF1A;&#x8BA9;&#x5BB9;&#x5668;&#x7684;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x4FDD;&#x6301;&#x6253;&#x5F00;
+-t&#xFF1A;&#x5206;&#x914D;&#x4E2A;&#x4F2A;&#x7EC8;&#x7AEF;
+<span class="hljs-_">-d</span>&#xFF1A;&#x5B88;&#x62A4;&#x72B6;&#x6001;&#x8FD0;&#x884C;
+--name&#xFF1A;&#x6307;&#x5B9A;&#x5BB9;&#x5668;&#x540D;&#x5B57;&#x53C2;&#x6570;
+<span class="hljs-built_in">test</span>_centos&#xFF1A;&#x5BB9;&#x5668;&#x540D;&#x5B57;
+centos&#xFF1A;&#x955C;&#x50CF;&#x540D;&#x6216;&#x8005;&#x955C;&#x50CF;ID
+</code></pre>
+<p>&#x3000;&#x3000;&#x8FD9;&#x91CC;&#x6211;&#x4EEC;&#x8BF4;&#x4E00;&#x4E0B; docker run &#x6267;&#x884C;&#x7684;&#x65F6;&#x5019;&#x90FD;&#x5E72;&#x4E86;&#x4EC0;&#x4E48;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x68C0;&#x67E5;&#x672C;&#x5730;&#x955C;&#x50CF;&#x662F;&#x5426;&#x5B58;&#x5728;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5219;&#x4F1A;&#x81EA;&#x52A8;&#x53BB;&#x516C;&#x6709;&#x4ED3;&#x5E93;&#x53BB;&#x4E0B;&#x8F7D;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x5229;&#x7528;&#x955C;&#x50CF;&#x521B;&#x5EFA;&#x5BB9;&#x5668;&#xFF0C;&#x5E76;&#x542F;&#x52A8;&#x5BB9;&#x5668;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#x7ED9;&#x5BB9;&#x5668;&#xFF0C;&#x5E76;&#x5728;&#x53EA;&#x8BFB;&#x7684;&#x955C;&#x50CF;&#x5C42;&#x5916;&#x9762;&#x6302;&#x8F7D;&#x4E00;&#x5C42;&#x53EF;&#x8BFB;&#x5199;&#x5C42;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x4ECE;&#x5BBF;&#x4E3B;&#x4E3B;&#x673A;&#x914D;&#x7F6E;&#x7684;&#x7F51;&#x6865;&#x63A5;&#x53E3;&#x4E2D;&#x6865;&#x63A5;&#x4E00;&#x4E2A;&#x865A;&#x62DF;&#x63A5;&#x53E3;&#x5230;&#x5BB9;&#x5668;&#x4E2D;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x4ECE;&#x7F51;&#x6865;&#x7684;&#x5730;&#x5740;&#x6C60;&#x914D;&#x7F6E;&#x4E00;&#x4E2A; IP &#x7ED9;&#x5BB9;&#x5668;</p>
+<p>&#x3000;&#x3000;&#x3000;&#x3000;&#x6267;&#x884C;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</p>
+<h4 id="14-&#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;">1.4. &#x67E5;&#x770B;&#x5BB9;&#x5668;&#x8FD0;&#x884C;&#x65E5;&#x5FD7;</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528;&#x547D;&#x4EE4; docker logs &#x6765;&#x67E5;&#x770B;&#x65E5;&#x5FD7;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         21 minutes ago      Up 21 minutes                           <span class="hljs-built_in">test</span>_centos
+[root@rsync131 ~]<span class="hljs-comment"># docker logs 159a08c11fec</span>
+</code></pre>
+<p><a href="#_labelTop">&#x56DE;&#x5230;&#x9876;&#x90E8;</a></p>
+<h2 id="&#x4E8C;&#x3001;&#x7EC8;&#x6B62;&#x5BB9;&#x5668;">&#x4E8C;&#x3001;&#x7EC8;&#x6B62;&#x5BB9;&#x5668;</h2>
+<h4 id="21-&#x7EC8;&#x6B62;&#x5BB9;&#x5668;">2.1. &#x7EC8;&#x6B62;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker stop &#x6765;&#x7EC8;&#x6B62;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker stop &#x5BB9;&#x5668;&#x540D;
+
+&#x5E38;&#x7528;&#x9009;&#x9879;&#xFF1A;
+-t&#xFF0C;--time[=10] : 10&#x79D2;&#x540E;&#x53D1;&#x9001;&#x7EC8;&#x6B62;&#x4FE1;&#x53F7;
+</code></pre>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker kill &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x7EC8;&#x6B62;&#x5BB9;&#x5668;</p>
+<p>&#x3000;&#x3000;docker kill &#x547D;&#x4EE4;&#x4F1A;&#x76F4;&#x63A5;&#x53D1;&#x9001; SIGKILL &#x4FE1;&#x53F7;&#x6765;&#x5F3A;&#x884C;&#x7EC8;&#x6B62;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         29 minutes ago      Up 29 minutes                           <span class="hljs-built_in">test</span>_centos
+[root@rsync131 ~]<span class="hljs-comment"># docker stop 159a08c11fec</span>
+[root@rsync131 ~]<span class="hljs-comment"># docker kill 159a08c11fec</span>
+</code></pre>
+<h4 id="22-&#x67E5;&#x770B;&#x7EC8;&#x6B62;&#x7684;&#x5BB9;&#x5668;">2.2. &#x67E5;&#x770B;&#x7EC8;&#x6B62;&#x7684;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker ps &#x53EA;&#x662F;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;</p>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker ps -a &#x5219;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x6240;&#x6709;&#x7684;&#x5BB9;&#x5668;&#x5305;&#x62EC;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x548C;&#x5DF2;&#x7ECF;&#x7EC8;&#x6B62;&#x7684;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         30 minutes ago      Up 30 minutes                           <span class="hljs-built_in">test</span>_centos
+[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         30 minutes ago      Up 30 minutes                                  <span class="hljs-built_in">test</span>_centos
+b9dd06b5dcba        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         36 minutes ago      Exited (0) 9 minutes ago                       sleepy_sammet
+</code></pre>
+<h4 id="23-&#x542F;&#x52A8;&#x548C;&#x91CD;&#x542F;&#x5DF2;&#x7ECF;&#x7EC8;&#x6B62;&#x7684;&#x5BB9;&#x5668;">2.3. &#x542F;&#x52A8;&#x548C;&#x91CD;&#x542F;&#x5DF2;&#x7ECF;&#x7EC8;&#x6B62;&#x7684;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x5DF2;&#x7ECF;&#x7EC8;&#x6B62;&#x7684;&#x5BB9;&#x5668;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; docker start &#x547D;&#x4EE4;&#x6765;&#x542F;&#x52A8;</p>
+<p>&#x3000;&#x3000;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; docker restart &#x547D;&#x4EE4;&#x5C06;&#x4E00;&#x4E2A;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;&#x5148; stop &#x540E; start</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                     PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         30 minutes ago      Up 30 minutes                                  <span class="hljs-built_in">test</span>_centos
+b9dd06b5dcba        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         36 minutes ago      Exited (0) 9 minutes ago                       sleepy_sammet
+[root@rsync131 ~]<span class="hljs-comment"># docker start b9dd06b5dcba</span>
+b9dd06b5dcba
+[root@rsync131 ~]<span class="hljs-comment"># docker restart 159a08c11fec</span>
+159a08c11fec
+</code></pre>
+<p><a href="#_labelTop">&#x56DE;&#x5230;&#x9876;&#x90E8;</a></p>
+<h2 id="&#x4E09;&#x3001;&#x8FDB;&#x5165;&#x5BB9;&#x5668;">&#x4E09;&#x3001;&#x8FDB;&#x5165;&#x5BB9;&#x5668;</h2>
+<p>&#x3000;&#x3000;&#x5728;&#x4F7F;&#x7528; -d &#x9009;&#x9879;&#x6765;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BB9;&#x5668;&#x4F1A;&#x5728;&#x540E;&#x53F0;&#x8FD0;&#x884C;&#xFF0C;&#x7528;&#x6237;&#x662F;&#x65E0;&#x6CD5;&#x770B;&#x5230;&#x5BB9;&#x5668;&#x7684;&#x4FE1;&#x606F;&#x7684;&#xFF0C;&#x4E5F;&#x65E0;&#x6CD5;&#x8FDB;&#x5165;&#x64CD;&#x4F5C;</p>
+<p>&#x3000;&#x3000;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8981;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x8FDB;&#x884C;&#x64CD;&#x4F5C;&#xFF0C;&#x5E94;&#x8BE5;&#x600E;&#x4E48;&#x529E;&#x5462;&#xFF1F;&#x5728; docker &#x4E2D;&#x8FDB;&#x5165; docker &#x4E2D;&#x7684;&#x65B9;&#x6CD5;&#x6709;&#x5F88;&#x591A;&#x79CD;&#xFF0C;&#x6BD4;&#x5982;&#x5B98;&#x65B9;&#x7684; attach &#x548C; exec &#x547D;&#x4EE4;&#xFF0C;&#x4EE5;&#x53CA;&#x7B2C;&#x4E09;&#x65B9;&#x7684; nsenter &#x5DE5;&#x5177; (&#x8FD9;&#x4E2A;&#x6CA1;&#x6709;&#x7528;&#x8FC7; &#x6700;&#x5E38;&#x7528;&#x7684;&#x8FD8;&#x662F; exec) &#x7B49;</p>
+<h4 id="31-attach-&#x547D;&#x4EE4;">3.1. attach &#x547D;&#x4EE4;</h4>
+<pre><code class="lang-bash">attach&#x547D;&#x4EE4;&#x662F;docker&#x81EA;&#x5E26;&#x7684;&#x547D;&#x4EE4;
+&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker attach [--detach-keys[=[]]] [--no-stdin] [--sig-proxy[=<span class="hljs-literal">true</span>]] CONTAINER
+
+&#x652F;&#x6301;&#x7684;&#x5E38;&#x7528;&#x4E3B;&#x8981;&#x9009;&#x9879;&#xFF1A;
+--detach-keys[=[]]&#xFF1A;&#x6307;&#x5B9A;&#x9000;&#x51FA;attach&#x6A21;&#x5F0F;&#x7684;&#x5FEB;&#x6377;&#x952E;&#x5E8F;&#x5217;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;CTRL+p CTRL-q
+--no-stdin=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span> :&#x662F;&#x5426;&#x5173;&#x95ED;&#x6807;&#x51C6;&#x8F93;&#x5165;&#xFF0C;&#x9ED8;&#x8BA4;<span class="hljs-literal">true</span>
+--sig-proxy=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span> : &#x662F;&#x5426;&#x4EE3;&#x7406;&#x6536;&#x5230;&#x7684;&#x7CFB;&#x7EDF;&#x4FE1;&#x53F7;&#x7ED9;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;<span class="hljs-literal">true</span>
+</code></pre>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         41 minutes ago      Up 10 minutes                           <span class="hljs-built_in">test</span>_centos
+[root@rsync131 ~]<span class="hljs-comment"># docker attach 159a08c11fec</span>
+[root@159a08c11fec /]<span class="hljs-comment">#</span>
+</code></pre>
+<p>PS&#xFF1A;&#x4F7F;&#x7528; attach &#x547D;&#x4EE4;&#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x662F;&#x5F88;&#x4E0D;&#x65B9;&#x4FBF;&#x7684;&#xFF0C;&#x5C31;&#x662F;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x53EA;&#x5141;&#x8BB8;&#x4E00;&#x4E2A;&#x4EBA;&#x4F7F;&#x7528;&#x5BB9;&#x5668;&#xFF0C;&#x5728;&#x5F00;&#x591A;&#x4E2A;&#x7A97;&#x53E3;&#x540C;&#x65F6;&#x7528; attach &#x8FDB;&#x5165;&#x5BB9;&#x5668;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7A97;&#x53E3;&#x6267;&#x884C;&#x7684;&#x547D;&#x4EE4;&#x4F1A;&#x540C;&#x6B65;&#xFF0C;&#x5F53;&#x4E00;&#x4E2A;&#x7A97;&#x53E3;&#x963B;&#x585E;&#x4E86;&#xFF0C;&#x5176;&#x4ED6;&#x7A97;&#x53E3;&#x5C31;&#x4E0D;&#x80FD;&#x73A9;&#x4E86;&#xFF0C;&#x6240;&#x6709;&#x4E0D;&#x7528;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#xFF0C;&#x592A;&#x5751;&#x4E86;</p>
+<h4 id="32-exec-&#x547D;&#x4EE4;">3.2. exec &#x547D;&#x4EE4;</h4>
+<p>&#x3000;&#x3000;&#x4E3A;&#x4E86;&#x89E3;&#x51B3;&#x4E0A;&#x9762;&#x7684;&#x5751;&#xFF0C;docker &#x5728; 1.3.0 &#x7248;&#x672C;&#x63D0;&#x4F9B;&#x4E86; exec &#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x89E3;&#x51B3;&#x4E86; attach &#x547D;&#x4EE4;&#x7684;&#x5751;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker <span class="hljs-built_in">exec</span>  [<span class="hljs-_">-d</span>|--detach] [--detach-keys[=[]]] [-i|--interactive] [--privileged] [-t|--tty] [-u|--user[=USER]] CONTAINER COMMAND [ARG....]
+
+&#x4E3B;&#x8981;&#x9009;&#x9879;&#x53C2;&#x6570;&#xFF1A;
+-i&#xFF0C; --interactive=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>: &#x6253;&#x5F00;&#x6807;&#x51C6;&#x8F93;&#x5165;&#x63A5;&#x6536;&#x7528;&#x6237;&#x8F93;&#x5165;&#x7684;&#x547D;&#x4EE4;&#xFF0C;&#x9ED8;&#x8BA4;<span class="hljs-literal">false</span>
+--privileged=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span> &#xFF1A;&#x662F;&#x5426;&#x7ED9;&#x6267;&#x884C;&#x547D;&#x4EE4;&#x4EE5;&#x9AD8;&#x6743;&#x9650;&#xFF0C;&#x9ED8;&#x8BA4;<span class="hljs-literal">false</span>
+-t&#xFF0C;--tty=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x5206;&#x914D;&#x4F2A;&#x7EC8;&#x7AEF; &#x9ED8;&#x8BA4;<span class="hljs-literal">false</span>
+-u&#xFF0C;--user=<span class="hljs-string">&quot;&quot;</span> &#xFF1A; &#x6267;&#x884C;&#x547D;&#x4EE4;&#x7684;&#x7528;&#x6237;&#x6216;&#x8005;ID
+</code></pre>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker exec -it 159a08c11fec bash</span>
+[root@159a08c11fec /]<span class="hljs-comment"># ls</span>
+anaconda-post.log  bin  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+[root@159a08c11fec /]<span class="hljs-comment">#</span>
+</code></pre>
+<p>&#x3000;&#x3000;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x4E00;&#x4E2A; bash &#x7EC8;&#x7AEF;&#x6253;&#x5F00;&#x4E86;&#xFF0C;&#x5728;&#x4E0D;&#x5F71;&#x54CD;&#x5BB9;&#x5668;&#x5185;&#x5176;&#x4ED6;&#x5E94;&#x7528;&#x7684;&#x524D;&#x63D0;&#x4E0B;&#xFF0C;&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x5F88;&#x5BB9;&#x6613;&#x7684;&#x4E0E;&#x5BB9;&#x5668;&#x8FDB;&#x884C;&#x4EA4;&#x4E92;</p>
+<p>PS&#xFF1A;&#x901A;&#x8FC7;&#x5236;&#x5B9A; -it &#x53C2;&#x6570;&#x4FDD;&#x6301;&#x6807;&#x51C6;&#x8F93;&#x5165;&#xFF0C;&#x5E76;&#x4E14;&#x5206;&#x914D;&#x4E2A;&#x4F2A;&#x7EC8;&#x7AEF;&#xFF0C;&#x662F;&#x5F88;&#x63A8;&#x8350;&#x7684;&#x65B9;&#x5F0F;&#x54E6;</p>
+<p><a href="#_labelTop">&#x56DE;&#x5230;&#x9876;&#x90E8;</a></p>
+<h2 id="&#x56DB;&#x3001;&#x5220;&#x9664;&#x5BB9;&#x5668;">&#x56DB;&#x3001;&#x5220;&#x9664;&#x5BB9;&#x5668;</h2>
+<p> &#x3000;&#x3000;&#x4F7F;&#x7528; docker rm &#x547D;&#x4EE4;&#x6765;&#x5220;&#x9664;&#x5904;&#x4E8E;&#x7EC8;&#x6B62;&#x6216;&#x8005;&#x9000;&#x51FA;&#x72B6;&#x6001;&#x7684;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker rm [<span class="hljs-_">-f</span>|--force] [<span class="hljs-_">-l</span>|--link] [-v|--volumes] CONTAINER [CONTAINER.....]
+
+&#x4E3B;&#x8981;&#x9009;&#x9879;&#x53C2;&#x6570;&#xFF1A;
+<span class="hljs-_">-f</span>,--force=<span class="hljs-literal">false</span>&#xFF1A;&#x662F;&#x5426;&#x5F3A;&#x884C;&#x7EC8;&#x6B62;&#x5E76;&#x5220;&#x9664;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x5BB9;&#x5668;
+<span class="hljs-_">-l</span>,--link=<span class="hljs-literal">false</span>&#xFF1A;&#x5220;&#x9664;&#x5BB9;&#x5668;&#x7684;&#x94FE;&#x63A5;&#xFF0C;&#x4F46;&#x662F;&#x4FDD;&#x7559;&#x5BB9;&#x5668;
+-v,--volumes=<span class="hljs-literal">false</span>&#xFF1A;&#x5220;&#x9664;&#x5BB9;&#x5668;&#x6302;&#x8F7D;&#x7684;&#x6570;&#x636E;&#x5377;
+b
+</code></pre>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                         PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         2 hours ago         Up About an hour                                   <span class="hljs-built_in">test</span>_centos
+b9dd06b5dcba        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         2 hours ago         Exited (0) About an hour ago                       sleepy_sammet
+[root@rsync131 ~]<span class="hljs-comment"># docker rm b9dd06b5dcba</span>
+b9dd06b5dcba
+[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         2 hours ago         Up About an hour                        <span class="hljs-built_in">test</span>_centos
+</code></pre>
+<p>&#x3000;&#x3000;&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;docker rm &#x547D;&#x4EE4;&#x53EA;&#x80FD;&#x5220;&#x9664;&#x5DF2;&#x7ECF;&#x7EC8;&#x6B62;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x4E0D;&#x80FD;&#x5220;&#x9664;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#xFF0C;&#x60F3;&#x8981;&#x5220;&#x9664;&#x8FD0;&#x884C;&#x4E2D;&#x7684;&#x5BB9;&#x5668;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; -f &#x53C2;&#x6570;&#xFF0C;&#x6765;&#x5F3A;&#x5236;&#x7684;&#x5220;&#x9664;</p>
+<p><a href="#_labelTop">&#x56DE;&#x5230;&#x9876;&#x90E8;</a></p>
+<h2 id="&#x4E94;&#x3001;&#x5BB9;&#x5668;&#x7684;&#x5BFC;&#x5165;&#x4E0E;&#x5BFC;&#x51FA;">&#x4E94;&#x3001;&#x5BB9;&#x5668;&#x7684;&#x5BFC;&#x5165;&#x4E0E;&#x5BFC;&#x51FA;</h2>
+<p>&#x3000;&#x3000;&#x5728;&#x505A;&#x5BB9;&#x5668;&#x8FC1;&#x79FB;&#x7684;&#x65F6;&#x5019;&#x6211;&#x4EEC;&#x5C31;&#x8981;&#x5148;&#x628A;&#x5BB9;&#x5668;&#x5BFC;&#x51FA;&#xFF0C;&#x7136;&#x540E;&#x5728;&#x5BFC;&#x5165;&#x5230;&#x5176;&#x4ED6;&#x7684;&#x5730;&#x65B9;</p>
+<h4 id="51-&#x5BFC;&#x51FA;&#x5BB9;&#x5668;">5.1. &#x5BFC;&#x51FA;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528;&#x547D;&#x4EE4; docker export &#x547D;&#x4EE4;&#x6765;&#x5BFC;&#x51FA;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker <span class="hljs-built_in">export</span> [-o|--output[=<span class="hljs-string">&quot;&quot;</span>]] CONTAINER
+
+&#x4E3B;&#x8981;&#x9009;&#x9879;&#x53C2;&#x6570;&#xFF1A;
+-o,--output&#xFF1A;&#x6307;&#x5B9A;&#x5BFC;&#x51FA;&#x7684;tar&#x6587;&#x4EF6;&#x540D;
+</code></pre>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+159a08c11fec        centos              <span class="hljs-string">&quot;/bin/bash&quot;</span>         2 hours ago         Up About an hour                        <span class="hljs-built_in">test</span>_centos
+[root@rsync131 ~]<span class="hljs-comment"># docker export -o centos_test.tar.gz 159a08c11fec</span>
+&#x6216;&#x8005;
+[root@rsync131 ~]<span class="hljs-comment"># docker export 159a08c11fec &gt; centos_test.tar.gz</span>
+[root@rsync131 ~]<span class="hljs-comment"># ll</span>
+&#x603B;&#x7528;&#x91CF; 273536
+-rw-------. 1 root root      1513 8&#x6708;  20 20:25 anaconda-ks.cfg
+-rw-------  1 root root 280093696 9&#x6708;  23 11:51 centos_test.tar.gz
+</code></pre>
+<h4 id="52-&#x5BFC;&#x5165;&#x5BB9;&#x5668;">5.2. &#x5BFC;&#x5165;&#x5BB9;&#x5668;</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528;&#x547D;&#x4EE4; docker import &#x5BFC;&#x5165;&#x53D8;&#x6210;&#x955C;&#x50CF;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker import [-c|--change[=[]]] [-m|--messge[=MESSAGE]] file|URL|- [REPOSITORY[:TAG]]
+
+&#x7528;&#x6237;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;-c &#x9009;&#x9879;&#x5728;&#x5BFC;&#x5165;&#x7684;&#x540C;&#x65F6;&#x6267;&#x884C;&#x5BF9;&#x5BB9;&#x5668;&#x8FDB;&#x884C;&#x4FEE;&#x6539;&#x7684;Dockerfile&#x6307;&#x4EE4;
+</code></pre>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker ps -a</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@rsync131 ~]<span class="hljs-comment"># ll</span>
+&#x603B;&#x7528;&#x91CF; 273536
+-rw-------. 1 root root      1513 8&#x6708;  20 20:25 anaconda-ks.cfg
+-rw-r--r--  1 root root 280093696 9&#x6708;  23 11:52 centos_test.tar.gz
+[root@rsync131 ~]<span class="hljs-comment"># docker import centos_test.tar.gz centos:1.0</span>
+sha256:f54ee7febeda5d3d8af11cc4756c1e6661feb84b2af6280654ef07ddf8bdead2
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+centos              1.0                 f54ee7febeda        5 seconds ago       271 MB
+docker.io/centos    latest              5182e96772bf        6 weeks ago         200 MB
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0xb.Docker镜像操作.html" class="navigation navigation-prev " aria-label="Previous page: 0xb.Docker镜像操作">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0xd.Docker仓库.html" class="navigation navigation-next " aria-label="Next page: 0xd.Docker仓库">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0xc.Docker容器操作","level":"1.2.3","depth":2,"next":{"title":"0xd.Docker仓库","level":"1.2.4","depth":2,"path":"Docker/0xd.Docker仓库.md","ref":"Docker/0xd.Docker仓库.md","articles":[]},"previous":{"title":"0xb.Docker镜像操作","level":"1.2.2","depth":2,"path":"Docker/0xb.Docker镜像操作.md","ref":"Docker/0xb.Docker镜像操作.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-toc","-lunr","-search","search-pro","code","back-to-top-button","splitter","expandable-chapters","chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search-pro":{},"page-toc":{"position":"top","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"cn-xiao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工程师笔记","language":"zh-hans","output.name":"site","gitbook":"3.2.3"},"file":{"path":"Docker/0xc.Docker容器操作.md","mtime":"2023-12-01T06:10:19.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-01T06:24:57.365Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

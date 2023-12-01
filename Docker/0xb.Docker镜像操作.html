@@ -1,0 +1,782 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0xb.Docker镜像操作 · 工程师笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cn-xiao">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0xc.Docker容器操作.html" />
+    
+    
+    <link rel="prev" href="0xa.Docker安装.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="0xa.Docker安装.html">
+            
+                <a href="0xa.Docker安装.html">
+            
+                    
+                    0xa.Docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="0xb.Docker镜像操作.html">
+            
+                <a href="0xb.Docker镜像操作.html">
+            
+                    
+                    0xb.Docker镜像操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="0xc.Docker容器操作.html">
+            
+                <a href="0xc.Docker容器操作.html">
+            
+                    
+                    0xc.Docker容器操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="0xd.Docker仓库.html">
+            
+                <a href="0xd.Docker仓库.html">
+            
+                    
+                    0xd.Docker仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="0xe.Docker数据卷.html">
+            
+                <a href="0xe.Docker数据卷.html">
+            
+                    
+                    0xe.Docker数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="0xf.Docker端口映射.html">
+            
+                <a href="0xf.Docker端口映射.html">
+            
+                    
+                    0xf.Docker端口映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="0xg.Dockerfile保你会.html">
+            
+                <a href="0xg.Dockerfile保你会.html">
+            
+                    
+                    0xg.Dockerfile保你会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="0xh.Docker_Compose.html">
+            
+                <a href="0xh.Docker_Compose.html">
+            
+                    
+                    0xh.Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="0xi.Docker_Machine.html">
+            
+                <a href="0xi.Docker_Machine.html">
+            
+                    
+                    0xi.Docker Machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="0xj.Docker_Swarm.html">
+            
+                <a href="0xj.Docker_Swarm.html">
+            
+                    
+                    0xj.Docker Swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="0xa.Docker三剑客常用命令.md">
+            
+                <span>
+            
+                    
+                    0xk.Docker三剑客常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >0xb.Docker镜像操作</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E00;-&#x83B7;&#x53D6;&#x955C;&#x50CF;">&#x4E00;. &#x83B7;&#x53D6;&#x955C;&#x50CF;</h2>
+<h4 id="11-docker-pull">1.1. docker pull</h4>
+<p>&#x3000;&#x3000;&#x955C;&#x50CF;&#x662F;&#x8FD0;&#x884C;&#x5BB9;&#x5668;&#x7684;&#x524D;&#x63D0;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6CA1;&#x6709;&#x955C;&#x50CF;&#x5C31;&#x6CA1;&#x6709;&#x529E;&#x6CD5;&#x521B;&#x5EFA;&#x5BB9;&#x5668;</p>
+<p>&#x3000;&#x3000;&#x83B7;&#x53D6;&#x955C;&#x50CF;&#x7684;&#x547D;&#x4EE4;:<br>&#x3000;&#x3000;docker pull<br>&#x3000;&#x3000;&#x8FD9;&#x4E2A;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5728; docker Hub &#x955C;&#x50CF;&#x6E90;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;</p>
+<p>&#x3000;&#x3000;&#x8BE5;&#x547D;&#x4EE4;&#x7684;&#x683C;&#x5F0F;&#x662F;:<br>&#x3000;&#x3000;docker pull NAME[:TAG]<br>&#x3000;&#x3000;&#x5176;&#x4E2D; name &#x662F;&#x955C;&#x50CF;&#x4ED3;&#x5E93;&#x7684;&#x540D;&#x79F0; (&#x7528;&#x6765;&#x533A;&#x5206;&#x955C;&#x50CF;)tag &#x662F;&#x955C;&#x50CF;&#x7684;&#x6807;&#x7B7E; (&#x7528;&#x6765;&#x6807;&#x6CE8;&#x7248;&#x672C;)&#xFF0C;&#x901A;&#x5E38;&#x60C5;&#x51B5;&#x4E0B;&#x6211;&#x4EEC;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x9700;&#x8981;&#x5305;&#x62EC; &quot;&#x540D;&#x79F0; + &#x6807;&#x7B7E;&quot; &#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash">&#x6211;&#x4EEC;pull&#x4E00;&#x4E2A;centos&#x7684;&#x955C;&#x50CF;
+[root@rsync131 ~]<span class="hljs-comment"># docker pull centos</span>
+Using default tag: latest
+latest: Pulling from library/centos
+256b176beaff: Downloading [==========&gt;                                        ]  15.75MB/74.69MB
+
+&#x8FD9;&#x91CC;&#x6211;&#x6CA1;&#x6709;&#x6307;&#x5B9A;&#x6807;&#x7B7E;&#xFF0C;&#x5B83;&#x7684;&#x4E0B;&#x8F7D;&#x7684;&#x9ED8;&#x8BA4;&#x6807;&#x7B7E;&#x662F;latest
+</code></pre>
+<p>&#x3000;&#x3000;&#x4E0B;&#x8F7D;&#x955C;&#x50CF;&#x7684;&#x8FC7;&#x7A0B;&#x89E3;&#x6790;&#xFF1A;</p>
+<p>&#x3000;&#x3000;&#x4E0B;&#x8F7D;&#x8FC7;&#x7A0B;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#xFF0C;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x4E00;&#x822C;&#x7531;&#x82E5;&#x5E72;&#x5C42;&#x7EC4;&#x6210; 256b176beaff &#x8FD9;&#x6837;&#x7684;&#x4E32;&#x662F;&#x8FD9;&#x4E2A;&#x955C;&#x50CF;&#x7684;&#x552F;&#x4E00; ID(&#x8FD9;&#x91CC;&#x53EA;&#x662F;&#x4E00;&#x4E2A;&#x77ED;&#x7684; ID&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5B8C;&#x6574;&#x7684; ID &#x5305;&#x62EC; 256 &#x6BD4;&#x7279;&#xFF0C;&#x7531; 64 &#x4E2A;&#x5341;&#x516D;&#x8FDB;&#x5236;&#x5B57;&#x7B26;&#x7EC4;&#x6210;)&#x3002;&#x4F7F;&#x7528; docker pull &#x547D;&#x4EE4;&#x4E0B;&#x8F7D;&#x65F6;&#x4F1A;&#x83B7;&#x53D6;&#x5E76;&#x8F93;&#x51FA;&#x955C;&#x50CF;&#x7684;&#x5404;&#x5C42;&#x4FE1;&#x606F;&#x3002;&#x5F53;&#x4E0D;&#x540C;&#x7684;&#x955C;&#x50CF;&#x5305;&#x62EC;&#x76F8;&#x540C;&#x7684;&#x5C42;&#x65F6;&#xFF0C;&#x672C;&#x5730;&#x4EC5;&#x5B58;&#x50A8;&#x5C42;&#x7684;&#x4E00;&#x4EFD;&#x5185;&#x5BB9;&#xFF0C;&#x51CF;&#x5C0F;&#x7684;&#x5B58;&#x50A8;&#x9700;&#x8981;&#x7684;&#x7A7A;&#x95F4;&#x3002; </p>
+<pre><code class="lang-bash">pull &#x5B50;&#x547D;&#x4EE4;&#x652F;&#x6301;&#x7684;&#x9009;&#x9879;&#x4E3B;&#x8981;&#x5305;&#x62EC;&#xFF1A;
+<span class="hljs-_">-a</span>,--all-tags=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x662F;&#x5426;&#x83B7;&#x53D6;&#x4ED3;&#x5E93;&#x4E2D;&#x7684;&#x6240;&#x6709;&#x955C;&#x50CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x5426;&#x3002;
+</code></pre>
+<h2 id="&#x4E8C;-&#x67E5;&#x770B;&#x955C;&#x50CF;&#x4FE1;&#x606F;">&#x4E8C;. &#x67E5;&#x770B;&#x955C;&#x50CF;&#x4FE1;&#x606F;</h2>
+<h4 id="21-docker-images">2.1. docker images</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker images &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5217;&#x51FA;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x5DF2;&#x6709;&#x955C;&#x50CF;&#x57FA;&#x672C;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+
+REPOSITORY&#xFF1A;&#x6765;&#x81EA;&#x54EA;&#x4E2A;&#x4ED3;&#x5E93;
+TAG&#xFF1A;&#x955C;&#x50CF;&#x7684;&#x6807;&#x7B7E;
+IMAGE ID&#xFF1A;&#x955C;&#x50CF;&#x7684;&#x552F;&#x4E00;ID
+CREATED&#xFF1A;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x95F4;
+SIZE&#xFF1A;&#x955C;&#x50CF;&#x7684;&#x5927;&#x5C0F;
+
+
+&#x5176;&#x4E2D;&#x955C;&#x50CF;&#x7684;ID&#x4FE1;&#x606F;&#x662F;&#x5341;&#x5206;&#x91CD;&#x8981;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x662F;&#x955C;&#x50CF;&#x7684;&#x552F;&#x4E00;&#x503C;
+</code></pre>
+<pre><code class="lang-bash">images&#x5B50;&#x547D;&#x4EE4;&#x4E3B;&#x8981;&#x652F;&#x6301;&#x7684;&#x9009;&#x9879;&#x5982;&#x4E0B;&#xFF1A;
+<span class="hljs-_">-a</span>,--all=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x955C;&#x50CF;&#x6587;&#x4EF6;(&#x5305;&#x62EC;&#x4E34;&#x65F6;&#x6587;&#x4EF6;)&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5426;
+--digests=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x5217;&#x51FA;&#x955C;&#x50CF;&#x7684;&#x6570;&#x5B57;&#x6458;&#x8981;&#x503C;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5426;
+<span class="hljs-_">-f</span>,--filter=[]&#xFF1A;&#x8FC7;&#x6EE4;&#x5217;&#x51FA;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x5982;dangling=<span class="hljs-literal">true</span>&#x53EA;&#x663E;&#x793A;&#x6CA1;&#x6709;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x955C;&#x50CF;
+--format=<span class="hljs-string">&quot;TEMPLATE&quot;</span>&#xFF1A;&#x63A7;&#x5236;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#xFF0C;&#x5982;.ID&#x4EE3;&#x8868;ID&#x4FE1;&#x606F;
+--no-trunc=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x5BF9;&#x8F93;&#x51FA;&#x683C;&#x5F0F;&#x4E2D;&#x592A;&#x957F;&#x7684;&#x90E8;&#x5206;&#x662F;&#x5426;&#x8FDB;&#x884C;&#x622A;&#x65AD;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x662F;
+-q,--quiet=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x4EC5;&#x8F93;&#x51FA;ID&#x4FE1;&#x606F;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5426;
+
+&#x66F4;&#x591A;&#x7684;&#x5B50;&#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;man docker-images&#x6765;&#x67E5;&#x770B;
+</code></pre>
+<h4 id="22-docker-tag">2.2. docker tag</h4>
+<p>&#x3000;&#x4F7F;&#x7528; docker tag &#x53EF;&#x4EE5;&#x7ED9;&#x955C;&#x50CF;&#x6DFB;&#x52A0;&#x6807;&#x7B7E;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker tag centos:latest mycentos:1.0</span>
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+mycentos            1.0                 5182e96772bf        6 weeks ago         200MB
+
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x770B;&#x5230;mycentos&#x548C;centos&#x7684;ID&#x3001;&#x5927;&#x5C0F;&#x5B8C;&#x5168;&#x4E00;&#x81F4;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x4ED6;&#x4EEC;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#xFF0C;&#x53EA;&#x662F;&#x4E2A;&#x522B;&#x540D;&#x800C;&#x5DF2;&#xFF0C;docker tag &#x5C31;&#x76F8;&#x5F53;&#x4E8E;Linux&#x521B;&#x5EFA;&#x7684;&#x94FE;&#x63A5;&#x6587;&#x4EF6;
+</code></pre>
+<h4 id="23-docker-inspect">2.3. docker inspect</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker inspect &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x955C;&#x50CF;&#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;&#xFF0C;&#x5305;&#x62EC;&#x5236;&#x4F5C;&#x8005;&#x3001;&#x9002;&#x5E94;&#x67B6;&#x6784;&#x3001;&#x5404;&#x5C42;&#x7684;&#x6570;&#x5B57;&#x6458;&#x8981;&#x7B49;&#x5F88;&#x591A;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker inspect centos</span>
+[
+    {
+        <span class="hljs-string">&quot;Id&quot;</span>: <span class="hljs-string">&quot;sha256:5182e96772bf11f4b912658e265dfe0db8bd314475443b6434ea708784192892&quot;</span>,
+        <span class="hljs-string">&quot;RepoTags&quot;</span>: [
+            <span class="hljs-string">&quot;centos:latest&quot;</span>,
+            <span class="hljs-string">&quot;mycentos:1.0&quot;</span>
+        ],
+        <span class="hljs-string">&quot;RepoDigests&quot;</span>: [
+            <span class="hljs-string">&quot;centos@sha256:6f6d986d425aeabdc3a02cb61c02abb2e78e57357e92417d6d58332856024faf&quot;</span>
+        ],
+        <span class="hljs-string">&quot;Parent&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;Comment&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;Created&quot;</span>: <span class="hljs-string">&quot;2018-08-06T19:21:48.235227329Z&quot;</span>,
+        <span class="hljs-string">&quot;Container&quot;</span>: <span class="hljs-string">&quot;d60ffc9ddd12462af4bdcdbe45b74f3b3f99b46607ada80c3ed877b7def84250&quot;</span>,
+        <span class="hljs-string">&quot;ContainerConfig&quot;</span>: {
+            <span class="hljs-string">&quot;Hostname&quot;</span>: <span class="hljs-string">&quot;d60ffc9ddd12&quot;</span>,
+            <span class="hljs-string">&quot;Domainname&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;User&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;AttachStdin&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;AttachStdout&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;AttachStderr&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;Tty&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;OpenStdin&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;StdinOnce&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;Env&quot;</span>: [
+                <span class="hljs-string">&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+            ],
+            <span class="hljs-string">&quot;Cmd&quot;</span>: [
+                <span class="hljs-string">&quot;/bin/sh&quot;</span>,
+                <span class="hljs-string">&quot;-c&quot;</span>,
+                <span class="hljs-string">&quot;#(nop) &quot;</span>,
+                <span class="hljs-string">&quot;CMD [\&quot;/bin/bash\&quot;]&quot;</span>
+            ],
+            <span class="hljs-string">&quot;ArgsEscaped&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">&quot;Image&quot;</span>: <span class="hljs-string">&quot;sha256:748eacc0f236df2fc9ba87c4d76a66cb10742120387e99e2acdb9454915c841d&quot;</span>,
+            <span class="hljs-string">&quot;Volumes&quot;</span>: null,
+            <span class="hljs-string">&quot;WorkingDir&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;Entrypoint&quot;</span>: null,
+            <span class="hljs-string">&quot;OnBuild&quot;</span>: null,
+            <span class="hljs-string">&quot;Labels&quot;</span>: {
+                <span class="hljs-string">&quot;org.label-schema.build-date&quot;</span>: <span class="hljs-string">&quot;20180804&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.license&quot;</span>: <span class="hljs-string">&quot;GPLv2&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.name&quot;</span>: <span class="hljs-string">&quot;CentOS Base Image&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.schema-version&quot;</span>: <span class="hljs-string">&quot;1.0&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.vendor&quot;</span>: <span class="hljs-string">&quot;CentOS&quot;</span>
+            }
+        },
+        <span class="hljs-string">&quot;DockerVersion&quot;</span>: <span class="hljs-string">&quot;17.06.2-ce&quot;</span>,
+        <span class="hljs-string">&quot;Author&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;Config&quot;</span>: {
+            <span class="hljs-string">&quot;Hostname&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;Domainname&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;User&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;AttachStdin&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;AttachStdout&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;AttachStderr&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;Tty&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;OpenStdin&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;StdinOnce&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;Env&quot;</span>: [
+                <span class="hljs-string">&quot;PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin&quot;</span>
+            ],
+            <span class="hljs-string">&quot;Cmd&quot;</span>: [
+                <span class="hljs-string">&quot;/bin/bash&quot;</span>
+            ],
+            <span class="hljs-string">&quot;ArgsEscaped&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">&quot;Image&quot;</span>: <span class="hljs-string">&quot;sha256:748eacc0f236df2fc9ba87c4d76a66cb10742120387e99e2acdb9454915c841d&quot;</span>,
+            <span class="hljs-string">&quot;Volumes&quot;</span>: null,
+            <span class="hljs-string">&quot;WorkingDir&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;Entrypoint&quot;</span>: null,
+            <span class="hljs-string">&quot;OnBuild&quot;</span>: null,
+            <span class="hljs-string">&quot;Labels&quot;</span>: {
+                <span class="hljs-string">&quot;org.label-schema.build-date&quot;</span>: <span class="hljs-string">&quot;20180804&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.license&quot;</span>: <span class="hljs-string">&quot;GPLv2&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.name&quot;</span>: <span class="hljs-string">&quot;CentOS Base Image&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.schema-version&quot;</span>: <span class="hljs-string">&quot;1.0&quot;</span>,
+                <span class="hljs-string">&quot;org.label-schema.vendor&quot;</span>: <span class="hljs-string">&quot;CentOS&quot;</span>
+            }
+        },
+        <span class="hljs-string">&quot;Architecture&quot;</span>: <span class="hljs-string">&quot;amd64&quot;</span>,
+        <span class="hljs-string">&quot;Os&quot;</span>: <span class="hljs-string">&quot;linux&quot;</span>,
+        <span class="hljs-string">&quot;Size&quot;</span>: 199723824,
+        <span class="hljs-string">&quot;VirtualSize&quot;</span>: 199723824,
+        <span class="hljs-string">&quot;GraphDriver&quot;</span>: {
+            <span class="hljs-string">&quot;Data&quot;</span>: {
+                <span class="hljs-string">&quot;MergedDir&quot;</span>: <span class="hljs-string">&quot;/var/lib/docker/overlay2/8d76bee4ae910273382e69f526ede7bbab349f6d0f04e6dc81a46c13f9f0fa92/merged&quot;</span>,
+                <span class="hljs-string">&quot;UpperDir&quot;</span>: <span class="hljs-string">&quot;/var/lib/docker/overlay2/8d76bee4ae910273382e69f526ede7bbab349f6d0f04e6dc81a46c13f9f0fa92/diff&quot;</span>,
+                <span class="hljs-string">&quot;WorkDir&quot;</span>: <span class="hljs-string">&quot;/var/lib/docker/overlay2/8d76bee4ae910273382e69f526ede7bbab349f6d0f04e6dc81a46c13f9f0fa92/work&quot;</span>
+            },
+            <span class="hljs-string">&quot;Name&quot;</span>: <span class="hljs-string">&quot;overlay2&quot;</span>
+        },
+        <span class="hljs-string">&quot;RootFS&quot;</span>: {
+            <span class="hljs-string">&quot;Type&quot;</span>: <span class="hljs-string">&quot;layers&quot;</span>,
+            <span class="hljs-string">&quot;Layers&quot;</span>: [
+                <span class="hljs-string">&quot;sha256:1d31b5806ba40b5f67bde96f18a181668348934a44c9253b420d5f04cfb4e37a&quot;</span>
+            ]
+        },
+        <span class="hljs-string">&quot;Metadata&quot;</span>: {
+            <span class="hljs-string">&quot;LastTagTime&quot;</span>: <span class="hljs-string">&quot;2018-09-22T12:25:06.648773262+08:00&quot;</span>
+        }
+    }
+]
+</code></pre>
+<p>&#x3000;&#x3000;&#x5176;&#x5B9E;&#x8FD4;&#x56DE;&#x7684;&#x5C31;&#x662F;&#x4E00;&#x4E2A; json &#x683C;&#x5F0F;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x7528; -f &#x53C2;&#x6570;&#x6765;&#x83B7;&#x53D6;&#x6307;&#x5B9A;&#x7684;&#x4FE1;&#x606F;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker inspect -f {{&quot;.Architecture&quot;}} centos</span>
+amd64
+</code></pre>
+<p><a href="#Top">&#x56DE;&#x5230;&#x9876;&#x90E8;</a></p>
+<h4 id="24-docker-history">2.4. docker history</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker history &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x955C;&#x50CF;&#x7684;&#x5386;&#x53F2;&#x4FE1;&#x606F;</p>
+<p>&#x3000;&#x3000;&#x65E2;&#x7136;&#x955C;&#x50CF;&#x6587;&#x4EF6;&#x662F;&#x7531;&#x591A;&#x5C42;&#x7EC4;&#x6210;&#x7684;&#xFF0C;&#x90A3;&#x4E48;&#x600E;&#x4E48;&#x77E5;&#x9053;&#x6BCF;&#x4E00;&#x5C42;&#x90FD;&#x5E72;&#x4E86;&#x4EC0;&#x4E48;&#x5462;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; history &#x547D;&#x4EE4;&#x6765;&#x67E5;&#x770B;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker history ubuntu</span>
+IMAGE               CREATED             CREATED BY                                      SIZE                COMMENT
+<span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         /bin/sh -c <span class="hljs-comment">#(nop)  CMD [&quot;/bin/bash&quot;]            0B</span>
+ 2 weeks ago         /bin/sh -c mkdir -p /run/systemd &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;do&#x2026;   7B
+ 2 weeks ago         /bin/sh -c sed -i &apos;</span>s/^<span class="hljs-comment">#\s*\(deb.*universe\)$&#x2026;   2.76kB</span>
+ 2 weeks ago         /bin/sh -c rm -rf /var/lib/apt/lists/*          0B
+ 2 weeks ago         /bin/sh -c <span class="hljs-built_in">set</span> -xe   &amp;&amp; <span class="hljs-built_in">echo</span> <span class="hljs-string">&apos;#!/bin/sh&apos;</span> &gt; /&#x2026;   745B
+ 2 weeks ago         /bin/sh -c <span class="hljs-comment">#(nop) ADD file:3df374a69ce696c21&#x2026;   84.1MB</span>
+
+
+&#x8FD9;&#x91CC;&#x6709;&#x4E00;&#x4E9B;&#x957F;&#x7684;&#x547D;&#x4EE4;&#x88AB;&#x81EA;&#x52A8;&#x622A;&#x65AD;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;--no-trunc&#x9009;&#x9879;&#x6765;&#x663E;&#x793A;&#x5B8C;&#x6574;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x592A;&#x957F;&#x4E86;&#x8FD8;&#x662F;&#x81EA;&#x5DF1;&#x8BD5;&#x4E00;&#x8BD5;&#x5427; &#x6CA1;&#x529E;&#x6CD5;&#x628A;&#x8F93;&#x51FA;&#x7C98;&#x8D34;&#x8FDB;&#x6765;
+</code></pre>
+<h2 id="&#x4E09;-&#x641C;&#x7D22;&#x955C;&#x50CF;">&#x4E09;. &#x641C;&#x7D22;&#x955C;&#x50CF;</h2>
+<h4 id="31-docker-search">3.1. docker search</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker search &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x641C;&#x7D22;&#x8FDC;&#x7AEF;&#x4ED3;&#x5E93;&#x7684;&#x5171;&#x4EAB;&#x955C;&#x50CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F;&#x641C;&#x7D22;&#x5B98;&#x65B9;&#x4ED3;&#x5E93;&#x4E2D;&#x7684;&#x955C;&#x50CF;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+
+docker search TERM
+
+&#x652F;&#x6301;&#x7684;&#x9009;&#x9879;&#x5305;&#x62EC;&#xFF1A;
+
+--automated=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x4EC5;&#x663E;&#x793A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5426;
+
+--no-trunc=<span class="hljs-literal">true</span>|<span class="hljs-literal">false</span>&#xFF1A;&#x8F93;&#x51FA;&#x4FE1;&#x606F;&#x4E0D;&#x622A;&#x65AD;&#x663E;&#x793A;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;&#x5426;
+
+<span class="hljs-_">-s</span>,--stars=X&#xFF1A;&#x6307;&#x5B9A;&#x4EC5;&#x663E;&#x793A;&#x8BC4;&#x8BBA;&#x4E3A;&#x6307;&#x5B9A;&#x661F;&#x7EA7;&#x4EE5;&#x4E0A;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E3A;0&#xFF0C;&#x5373;&#x8F93;&#x51FA;&#x6240;&#x6709;&#x7684;&#x8FDB;&#x955C;&#x50CF;
+</code></pre>
+<p>&#x3000;&#x3000;&#x641C;&#x7D22;&#x6240;&#x6709;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x8BC4;&#x4EF7;&#x4E3A; 1 + &#x7684;&#x5E26; nginx &#x7684;&#x955C;&#x50CF;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker search --automated -s 3 nginx</span>
+Flag --automated has been deprecated, use --filter=is-automated=<span class="hljs-literal">true</span> instead
+Flag --stars has been deprecated, use --filter=stars=3 instead
+NAME                                                   DESCRIPTION                                     STARS               OFFICIAL            AUTOMATED
+jwilder/nginx-proxy                                    Automated Nginx reverse proxy <span class="hljs-keyword">for</span> docker con&#x2026;   1416                                    [OK]
+richarvey/nginx-php-fpm                                Container running Nginx + PHP-FPM capable of&#x2026;   615                                     [OK]
+jrcs/letsencrypt-nginx-proxy-companion                 LetsEncrypt container to use with nginx as p&#x2026;   414                                     [OK]
+webdevops/php-nginx                                    Nginx with PHP-FPM                              113                                     [OK]
+zabbix/zabbix-web-nginx-mysql                          Zabbix frontend based on Nginx web-server wi&#x2026;   68                                      [OK]
+bitnami/nginx                                          Bitnami nginx Docker Image                      58                                      [OK]
+1and1internet/ubuntu-16-nginx-php-phpmyadmin-mysql-5   ubuntu-16-nginx-php-phpmyadmin-mysql-5          44                                      [OK]
+tobi312/rpi-nginx                                      NGINX on Raspberry Pi / armhf                   20                                      [OK]
+blacklabelops/nginx                                    Dockerized Nginx Reverse Proxy Server.          12                                      [OK]
+wodby/drupal-nginx                                     Nginx <span class="hljs-keyword">for</span> Drupal container image                10                                      [OK]
+nginxdemos/hello                                       NGINX webserver that serves a simple page co&#x2026;   8                                       [OK]
+webdevops/nginx                                        Nginx container                                 8                                       [OK]
+1science/nginx                                         Nginx Docker images that include Consul Temp&#x2026;   4                                       [OK]
+behance/docker-nginx                                   Provides base OS, patches and stable nginx f&#x2026;   3                                       [OK]
+</code></pre>
+<h2 id="&#x56DB;-&#x5220;&#x9664;&#x955C;&#x50CF;">&#x56DB;. &#x5220;&#x9664;&#x955C;&#x50CF;</h2>
+<h4 id="41-docker-rmi">4.1. docker rmi</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker rmi &#x547D;&#x4EE4;&#x53EF;&#x4EE5;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x955C;&#x50CF;&#x6587;&#x4EF6;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker rmi IMAGE [IMAGE....]
+
+PS&#xFF1A;&#x5F53;&#x672C;&#x5730;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#x6709;&#x591A;&#x4E2A;&#x6807;&#x7B7E;&#x7684;&#x65F6;&#x5019;&#xFF0C;docker rmi &#x53EA;&#x4F1A;&#x5220;&#x9664;&#x6307;&#x5B9A;&#x7684;&#x6807;&#x7B7E;&#x955C;&#x50CF;&#x800C;&#x5DF2;
+
+&#x652F;&#x6301;&#x7684;&#x9009;&#x9879;&#x53C2;&#x6570;&#xFF1A;
+<span class="hljs-_">-f</span> &#xFF1A;&#x5F3A;&#x5236;&#x5220;&#x9664;&#x955C;&#x50CF;&#x6587;&#x4EF6;
+</code></pre>
+<p>&#x3000;&#x3000;&#x901A;&#x8FC7;&#x6807;&#x7B7E;&#x5220;&#x9664;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+mycentos            1.0                 5182e96772bf        6 weeks ago         200MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+[root@rsync131 ~]<span class="hljs-comment"># docker rmi mycentos:1.0</span>
+Untagged: mycentos:1.0
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+</code></pre>
+<p>&#x3000;&#x3000;&#x901A;&#x8FC7; ID &#x5220;&#x9664;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+[root@rsync131 ~]<span class="hljs-comment"># docker rmi 5182e96772bf</span>
+Untagged: centos:latest
+Untagged: centos@sha256:6f6d986d425aeabdc3a02cb61c02abb2e78e57357e92417d6d58332856024faf
+Deleted: sha256:5182e96772bf11f4b912658e265dfe0db8bd314475443b6434ea708784192892
+Deleted: sha256:1d31b5806ba40b5f67bde96f18a181668348934a44c9253b420d5f04cfb4e37a
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+</code></pre>
+<p>&#x3000;&#x3000;&#x5F3A;&#x5236;&#x5220;&#x9664;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+[root@rsync131 ~]<span class="hljs-comment"># docker rmi -f 5182e96772bf</span>
+Untagged: centos:latest
+Untagged: centos@sha256:6f6d986d425aeabdc3a02cb61c02abb2e78e57357e92417d6d58332856024faf
+Deleted: sha256:5182e96772bf11f4b912658e265dfe0db8bd314475443b6434ea708784192892
+Deleted: sha256:1d31b5806ba40b5f67bde96f18a181668348934a44c9253b420d5f04cfb4e37a
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+</code></pre>
+<h2 id="&#x4E94;-&#x521B;&#x5EFA;&#x955C;&#x50CF;">&#x4E94;. &#x521B;&#x5EFA;&#x955C;&#x50CF;</h2>
+<p>&#x3000;&#x3000;&#x5176;&#x5B9E;&#x521B;&#x5EFA;&#x955C;&#x50CF;&#x6709;&#x4E09;&#x79CD;&#x65B9;&#x5F0F;&#xFF0C;&#x57FA;&#x4E8E;&#x5DF2;&#x6709;&#x7684;&#x955C;&#x50CF;&#x7684;&#x5BB9;&#x5668;&#x521B;&#x5EFA;&#xFF0C;&#x57FA;&#x4E8E;&#x672C;&#x5730;&#x6A21;&#x677F;&#x5BFC;&#x5165;&#xFF0C;&#x57FA;&#x4E8E; Dockerfile &#x521B;&#x5EFA;&#xFF0C;&#x8FD9;&#x91CC;&#x53EA;&#x4ECB;&#x7ECD;&#x4E0B;&#x524D;&#x4E24;&#x79CD;&#xFF0C;&#x56E0;&#x4E3A; dockerfile &#x662F;&#x4E00;&#x4E2A;&#x5F88;&#x9AD8;&#x7EA7;&#x7684;&#x4E1C;&#x897F;&#x4F1A;&#x6709;&#x4E13;&#x95E8;&#x7684;&#x6587;&#x7AE0;&#x6765;&#x4ECB;&#x7ECD;&#xFF1A;&#x70B9;&#x51FB; Dockerfile</p>
+<h4 id="51-docker-commit">5.1. docker commit</h4>
+<p>&#x3000;&#x3000;docker commit &#x662F;&#x57FA;&#x4E8E;&#x5DF2;&#x6709;&#x7684;&#x955C;&#x50CF;&#x7684;&#x5BB9;&#x5668;&#x521B;&#x5EFA;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+docker commit [OPTIONS] CONTAINER [REPOSITORY[:TAG]]
+
+&#x652F;&#x6301;&#x7684;&#x9009;&#x9879;&#x5305;&#x62EC;&#xFF1A;
+<span class="hljs-_">-a</span>,--author=<span class="hljs-string">&quot;&quot;</span>&#xFF1A;&#x4F5C;&#x8005;&#x7684;&#x4FE1;&#x606F;
+-c,--change=[]&#xFF1A;&#x63D0;&#x4EA4;&#x7684;&#x65F6;&#x5019;&#x6267;&#x884C;&#x7684;Dockerfile&#x6307;&#x4EE4;&#xFF0C;&#x5305;&#x62EC;CMD|ENTRYPOINT|ENV|EXPOSE|LABEL|ONBUILD|USER|VOLUME|WORKDIR&#x7B49;
+-m,--message=<span class="hljs-string">&quot;&quot;</span>&#xFF1A;&#x63D0;&#x4EA4;&#x7684;&#x4FE1;&#x606F;
+-p,--pause=<span class="hljs-literal">true</span>&#xFF1A;&#x63D0;&#x4EA4;&#x65F6;&#x6682;&#x505C;&#x5BB9;&#x5668;&#x8FD0;&#x884C;
+</code></pre>
+<p>&#x3000;&#x3000;&#x56E0;&#x4E3A;&#x662F;&#x57FA;&#x4E8E;&#x5BB9;&#x5668;&#x521B;&#x5EFA;&#x7684;&#x955C;&#x50CF;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x5148;&#x521B;&#x5EFA;&#x4E2A;&#x5BB9;&#x5668;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x521B;&#x5EFA;&#x4E2A;&#x5BB9;&#x5668;&#xFF0C;touch&#x4E2A;&#x6587;&#x4EF6;&#xFF0C;&#x8FD9;&#x91CC;&#x76F8;&#x5BF9;&#x6E90;&#x955C;&#x50CF;&#x5DF2;&#x7ECF;&#x53D1;&#x751F;&#x4E86;&#x6539;&#x53D8; c86d860188f3 &#x5C31;&#x662F;&#x5BB9;&#x5668;ID</span>
+[root@rsync131 ~]<span class="hljs-comment"># docker run -it centos bash</span>
+[root@c86d860188f3 /]<span class="hljs-comment"># touch a.txt</span>
+[root@c86d860188f3 /]<span class="hljs-comment"># exit</span>
+<span class="hljs-built_in">exit</span>
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x955C;&#x50CF;&#x57FA;&#x4E8E;c86d860188f3 &#x5BB9;&#x5668;</span>
+[root@rsync131 ~]<span class="hljs-comment"># docker commit -m &quot;add a.txt&quot; -a &quot;zhujingzhi&quot; c86d860188f3 a_centos:1.0</span>
+sha256:64b8d4f3a1901353deeb31e8b646c0f04dd58accddc951814fdce237e2097a6f
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x955C;&#x50CF;</span>
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+a_centos            1.0                 64b8d4f3a190        19 seconds ago      200MB
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+</code></pre>
+<h4 id="52-docker-import">5.2. docker import</h4>
+<p>&#x3000;&#x3000;&#x4E5F;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4ECE;&#x4E00;&#x4E2A;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x6587;&#x4EF6;&#x5BFC;&#x5165;&#x4E00;&#x4E2A;&#x955C;&#x50CF;&#xFF0C;&#x53EA;&#x8981;&#x4F7F;&#x7528; docker import &#x547D;&#x4EE4;</p>
+<pre><code class="lang-bash">&#x8BED;&#x6CD5;&#x683C;&#x5F0F;&#xFF1A;
+
+docker import [OPTIONS] file|URL|-[REPOSITORY[:TAG]]
+</code></pre>
+<p>&#x3000;&#x3000;&#x7ED9;&#x670B;&#x53CB;&#x4EEC;&#x4E2A;&#x94FE;&#x63A5;&#x4E0B;&#x8F7D;&#x6A21;&#x677F;&#xFF1A;<a href="https://download.openvz.org/template/precreated/" target="_blank">https://download.openvz.org/template/precreated/</a></p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># ll</span>
+&#x603B;&#x7528;&#x91CF; 345664
+-rw-------. 1 root root      1513 8&#x6708;  20 20:25 anaconda-ks.cfg
+-rw-r--r--  1 root root 145639219 9&#x6708;  22 14:12 centos-7-x86_64-minimal.tar.gz
+
+[root@rsync131 ~]<span class="hljs-comment"># cat centos-7-x86_64-minimal.tar.gz | docker import - centos-mini:1.0</span>
+sha256:4dec53e6e02af646126879ac69c8bee4ef6bdcf9fe0cc86d3a92959ce2e0b9<span class="hljs-built_in">cd</span>
+
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+centos-mini         1.0                 4dec53e6e02a        4 seconds ago       435MB
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+</code></pre>
+<h2 id="&#x516D;-&#x955C;&#x50CF;&#x7684;&#x5BFC;&#x51FA;&#x548C;&#x5BFC;&#x5165;">&#x516D;. &#x955C;&#x50CF;&#x7684;&#x5BFC;&#x51FA;&#x548C;&#x5BFC;&#x5165;</h2>
+<h4 id="61-docker-save">6.1. docker save</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker save &#x53EF;&#x4EE5;&#x628A;&#x955C;&#x50CF;&#x5BFC;&#x51FA;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+a_centos            1.0                 64b8d4f3a190        17 minutes ago      200MB
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+[root@rsync131 ~]<span class="hljs-comment"># docker save -o centos_bak.tar.gz centos</span>
+[root@rsync131 ~]<span class="hljs-comment"># ll</span>
+&#x603B;&#x7528;&#x91CF; 203436
+-rw-------. 1 root root      1513 8&#x6708;  20 20:25 anaconda-ks.cfg
+-rw-------  1 root root 208301056 9&#x6708;  22 13:47 centos_bak.tar.gz
+</code></pre>
+<h4 id="62-docker-load">6.2. docker load</h4>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker load &#x53EF;&#x4EE5;&#x628A;&#x4F7F;&#x7528; docker save &#x5BFC;&#x51FA;&#x7684;&#x6587;&#x4EF6;&#x5BFC;&#x5165;</p>
+<pre><code class="lang-bash">[root@rsync131 ~]<span class="hljs-comment"># docker load --input centos_bak.tar.gz</span>
+&#x6216;&#x8005;
+[root@rsync131 ~]<span class="hljs-comment"># docker load &lt; centos_bak.tar.gz</span>
+1d31b5806ba4: Loading layer [==================================================&gt;]  208.3MB/208.3MB
+Loaded image: centos:latest
+[root@rsync131 ~]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+ubuntu              latest              <span class="hljs-built_in">cd</span>6d8154f1e1        2 weeks ago         84.1MB
+centos              latest              5182e96772bf        6 weeks ago         200MB
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0xa.Docker安装.html" class="navigation navigation-prev " aria-label="Previous page: 0xa.Docker安装">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0xc.Docker容器操作.html" class="navigation navigation-next " aria-label="Next page: 0xc.Docker容器操作">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0xb.Docker镜像操作","level":"1.2.2","depth":2,"next":{"title":"0xc.Docker容器操作","level":"1.2.3","depth":2,"path":"Docker/0xc.Docker容器操作.md","ref":"Docker/0xc.Docker容器操作.md","articles":[]},"previous":{"title":"0xa.Docker安装","level":"1.2.1","depth":2,"path":"Docker/0xa.Docker安装.md","ref":"Docker/0xa.Docker安装.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-toc","-lunr","-search","search-pro","code","back-to-top-button","splitter","expandable-chapters","chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search-pro":{},"page-toc":{"position":"top","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"cn-xiao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工程师笔记","language":"zh-hans","output.name":"site","gitbook":"3.2.3"},"file":{"path":"Docker/0xb.Docker镜像操作.md","mtime":"2023-12-01T06:10:12.782Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-01T06:24:57.365Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,832 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>0xi.Docker Machine · 工程师笔记</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="cn-xiao">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-toc/page-toc.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-pro/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-back-to-top-button/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-splitter/splitter.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="0xj.Docker_Swarm.html" />
+    
+    
+    <link rel="prev" href="0xh.Docker_Compose.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Docker
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="0xa.Docker安装.html">
+            
+                <a href="0xa.Docker安装.html">
+            
+                    
+                    0xa.Docker安装
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="0xb.Docker镜像操作.html">
+            
+                <a href="0xb.Docker镜像操作.html">
+            
+                    
+                    0xb.Docker镜像操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="0xc.Docker容器操作.html">
+            
+                <a href="0xc.Docker容器操作.html">
+            
+                    
+                    0xc.Docker容器操作
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="0xd.Docker仓库.html">
+            
+                <a href="0xd.Docker仓库.html">
+            
+                    
+                    0xd.Docker仓库
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="0xe.Docker数据卷.html">
+            
+                <a href="0xe.Docker数据卷.html">
+            
+                    
+                    0xe.Docker数据卷
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="0xf.Docker端口映射.html">
+            
+                <a href="0xf.Docker端口映射.html">
+            
+                    
+                    0xf.Docker端口映射
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="0xg.Dockerfile保你会.html">
+            
+                <a href="0xg.Dockerfile保你会.html">
+            
+                    
+                    0xg.Dockerfile保你会
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="0xh.Docker_Compose.html">
+            
+                <a href="0xh.Docker_Compose.html">
+            
+                    
+                    0xh.Docker Compose
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.9" data-path="0xi.Docker_Machine.html">
+            
+                <a href="0xi.Docker_Machine.html">
+            
+                    
+                    0xi.Docker Machine
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="0xj.Docker_Swarm.html">
+            
+                <a href="0xj.Docker_Swarm.html">
+            
+                    
+                    0xj.Docker Swarm
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="0xa.Docker三剑客常用命令.md">
+            
+                <span>
+            
+                    
+                    0xk.Docker三剑客常用命令
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >0xi.Docker Machine</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;-docker-machine">&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F; Docker Machine</h2>
+<p>&#x3000;&#x3000;Docker Machine &#x662F; Docker &#x5B98;&#x65B9;&#x7F16;&#x6392;&#x9879;&#x76EE;&#x4E4B;&#x4E00;&#xFF0C;&#x4F7F;&#x7528; go &#x8BED;&#x8A00;&#x7F16;&#x5199;&#x7684;&#xFF0C;&#x4F7F;&#x7528;&#x4E0D;&#x540C;&#x5F15;&#x64CE;&#x5728;&#x591A;&#x79CD;&#x5E73;&#x53F0;&#x4E0A;&#x5FEB;&#x901F;&#x7684;&#x5B89;&#x88C5; Docker &#x73AF;&#x5883;&#xFF0C;&#x5F00;&#x6E90;&#x5730;&#x5740;:<a href="https://github.com/docker/machine" target="_blank">https://github.com/docker/machine</a>&#x3002;</p>
+<p>&#x3000;&#x3000;Docker Machine &#x662F;&#x4E00;&#x4E2A;&#x5DE5;&#x5177;&#xFF0C;&#x5B83;&#x5141;&#x8BB8;&#x4F60;&#x5728;&#x865A;&#x62DF;&#x5BBF;&#x4E3B;&#x673A;&#x4E0A;&#x5B89;&#x88C5; Docker&#xFF0C;&#x5E76;&#x4F7F;&#x7528; docker-machine &#x547D;&#x4EE4;&#x7BA1;&#x7406;&#x8FD9;&#x4E2A;&#x5BBF;&#x4E3B;&#x673A;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Docker Machine &#x5728;&#x672C;&#x5730;&#x7684; MAC &#x6216;&#x8005; windows box&#x3001;&#x516C;&#x53F8;&#x7F51;&#x7EDC;&#xFF0C;&#x6570;&#x636E;&#x4E2D;&#x5FC3;&#x6216;&#x8005; AWS &#x8FD9;&#x6837;&#x7684;&#x4E91;&#x63D0;&#x4F9B;&#x5546;&#x4E0A;&#x521B;&#x5EFA; docker&#x3002;</p>
+<p>&#x3000;&#x3000;&#x4F7F;&#x7528; docker-machine &#x547D;&#x4EE4;&#xFF0C;&#x53EF;&#x4EE5;&#x542F;&#x52A8;&#x3001;&#x5BA1;&#x67E5;&#x3001;&#x505C;&#x6B62;&#x3001;&#x91CD;&#x542F;&#x6258;&#x7BA1;&#x7684; docker &#x4E5F;&#x53EF;&#x4EE5;&#x5347;&#x7EA7; Docker &#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x5B88;&#x62A4;&#x7A0B;&#x5E8F;&#x5E76;&#x914D;&#x7F6E; docker &#x5BA2;&#x6237;&#x7AEF;&#x548C;&#x5BBF;&#x4E3B;&#x673A;&#x901A;&#x4FE1;&#x3002;</p>
+<p>&#x3000;&#x3000;Docker Machine &#x4E5F;&#x53EF;&#x4EE5;&#x96C6;&#x4E2D;&#x7BA1;&#x7406;&#x6240;&#x4EE5;&#x5F97; docker &#x4E3B;&#x673A;&#x3002;</p>
+<p><img src="0xi.Docker%20Machine.assets/1479220-20181010171322775-1488475773.png" alt=""></p>
+<h2 id="&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528;-docker-machine">&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4F7F;&#x7528; Docker Machine</h2>
+<p>Docker Machine &#x4F7F;&#x4F60;&#x80FD;&#x591F;&#x5728;&#x5404;&#x79CD; Linux &#x4E0A;&#x914D;&#x7F6E;&#x591A;&#x4E2A;&#x8FDC;&#x7A0B; Docker &#x5BBF;&#x4E3B;&#x673A;&#x3002;<br>&#x6B64;&#x5916;&#xFF0C;Machine &#x5141;&#x8BB8;&#x4F60;&#x5728;&#x8F83;&#x65E9;&#x7684; Mac &#x6216; Windows &#x7CFB;&#x7EDF;&#x4E0A;&#x8FD0;&#x884C; Docker&#xFF0C;&#x5982;&#x4E0A;&#x4E00;&#x4E3B;&#x9898;&#x6240;&#x8FF0;&#x3002;<br>Docker Machine &#x6709;&#x8FD9;&#x4E24;&#x4E2A;&#x5E7F;&#x6CDB;&#x7684;&#x7528;&#x4F8B;&#x3002;</p>
+<ul>
+<li>&#x6211;&#x6709;&#x4E00;&#x4E2A;&#x8F83;&#x65E7;&#x7684;&#x684C;&#x9762;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x5E0C;&#x671B;&#x5728; Mac &#x6216; Windows &#x4E0A;&#x8FD0;&#x884C; Docker</li>
+</ul>
+<p><img src="0xi.Docker%20Machine.assets/machine-mac-win.png" alt="machine-mac-win"></p>
+<p>&#x5982;&#x679C;&#x4F60;&#x4E3B;&#x8981;&#x5728;&#x4E0D;&#x7B26;&#x5408;&#x65B0;&#x7684; Docker for Mac &#x548C; Docker for Windows &#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x65E7; Mac &#x6216; Windows &#x7B14;&#x8BB0;&#x672C;&#x7535;&#x8111;&#x6216;&#x53F0;&#x5F0F;&#x673A;&#x4E0A;&#x5DE5;&#x4F5C;&#xFF0C;&#x5219;&#x9700;&#x8981; Docker Machine &#x6765;&#x5728;&#x672C;&#x5730; &#x201C;&#x8FD0;&#x884C; Docker&#x201D;&#xFF08;&#x5373; Docker Engine&#xFF09;&#x3002;&#x5728; Mac &#x6216; Windows box &#x4E2D;&#x4F7F;&#x7528; Docker Toolbox &#x5B89;&#x88C5;&#x7A0B;&#x5E8F;&#x5B89;&#x88C5; Docker Machine &#x5C06;&#x4E3A; Docker Engine &#x914D;&#x7F6E;&#x4E00;&#x4E2A;&#x672C;&#x5730;&#x7684;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x4F7F;&#x4F60;&#x80FD;&#x591F;&#x8FDE;&#x63A5;&#x5B83;&#x3001;&#x5E76;&#x8FD0;&#x884C; docker &#x547D;&#x4EE4;&#x3002;</p>
+<ul>
+<li>&#x6211;&#x60F3;&#x5728;&#x8FDC;&#x7A0B;&#x7CFB;&#x7EDF;&#x4E0A;&#x914D;&#x7F6E; Docker &#x5BBF;&#x4E3B;&#x673A;</li>
+</ul>
+<p><img src="0xi.Docker%20Machine.assets/provision-use-case.png" alt="provision-use-case"></p>
+<p>Docker Engine Linux &#x7CFB;&#x7EDF;&#x4E0A;&#x539F;&#x751F;&#x5730;&#x8FD0;&#x884C;&#x3002;&#x5982;&#x679C;&#x4F60;&#x6709;&#x4E00;&#x4E2A; Linux &#x4F5C;&#x4E3A;&#x4F60;&#x7684;&#x4E3B;&#x7CFB;&#x7EDF;&#xFF0C;&#x5E76;&#x4E14;&#x60F3;&#x8981;&#x8FD0;&#x884C; docker &#x547D;&#x4EE4;&#xFF0C;&#x6240;&#x6709;&#x4F60;&#x9700;&#x8981;&#x505A;&#x7684;&#x5C31;&#x662F;&#x4E0B;&#x8F7D;&#x5E76;&#x5B89;&#x88C5; Docker Engine &#x3002;&#x7136;&#x800C;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x5728;&#x7F51;&#x7EDC;&#x4E0A;&#x3001;&#x4E91;&#x4E2D;&#x751A;&#x81F3;&#x672C;&#x5730;&#x914D;&#x7F6E;&#x591A;&#x4E2A; Docker &#x5BBF;&#x4E3B;&#x673A;&#x6709;&#x4E00;&#x4E2A;&#x6709;&#x6548;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F60;&#x9700;&#x8981; Docker Machine&#x3002;</p>
+<p>&#x65E0;&#x8BBA;&#x4F60;&#x7684;&#x4E3B;&#x7CFB;&#x7EDF;&#x662F; Mac&#x3001;Windows &#x8FD8;&#x662F; Linux&#xFF0C;&#x4F60;&#x90FD;&#x53EF;&#x4EE5;&#x5728;&#x5176;&#x4E0A;&#x5B89;&#x88C5; Docker Machine&#xFF0C;&#x5E76;&#x4F7F;&#x7528; docker-machine &#x547D;&#x4EE4;&#x6765;&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x5927;&#x91CF;&#x7684; Docker &#x5BBF;&#x4E3B;&#x673A;&#x3002;&#x5B83;&#x4F1A;&#x81EA;&#x52A8;&#x521B;&#x5EFA;&#x5BBF;&#x4E3B;&#x673A;&#x3001;&#x5728;&#x5176;&#x4E0A;&#x5B89;&#x88C5; Docker Engine &#x3001;&#x7136;&#x540E;&#x914D;&#x7F6E; docker &#x5BA2;&#x6237;&#x7AEF;&#x3002;&#x6BCF;&#x4E2A;&#x88AB;&#x7BA1;&#x7406;&#x7684;&#x5BBF;&#x4E3B;&#x673A;&#xFF08;&#x201C;machine&#x201D;&#xFF09;&#x662F; Docker &#x5BBF;&#x4E3B;&#x673A;&#x548C;&#x914D;&#x7F6E;&#x597D;&#x7684;&#x5BA2;&#x6237;&#x7AEF;&#x7684;&#x7ED3;&#x5408;&#x3002;</p>
+<h2 id="&#x4E09;&#x3001;docker-&#x548C;-docker-machine-&#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;">&#x4E09;&#x3001;Docker &#x548C; Docker Machine &#x4E4B;&#x95F4;&#x7684;&#x533A;&#x522B;</h2>
+<p>&#x5F53;&#x4EBA;&#x4EEC;&#x8BF4; &#x201C;Docker&#x201D; &#x65F6;&#xFF0C;&#x4ED6;&#x4EEC;&#x901A;&#x5E38;&#x662F;&#x6307; Docker Engine&#xFF0C;&#x5B83;&#x662F;&#x4E00;&#x4E2A;&#x5BA2;&#x6237;&#x7AEF; - &#x670D;&#x52A1;&#x5668;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x7531; Docker &#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x3001;&#x4E00;&#x4E2A; REST API &#x6307;&#x5B9A;&#x4E0E;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x4EA4;&#x4E92;&#x7684;&#x63A5;&#x53E3;&#x3001;&#x548C;&#x4E00;&#x4E2A;&#x547D;&#x4EE4;&#x884C;&#x63A5;&#x53E3;&#xFF08;CLI&#xFF09;&#x4E0E;&#x5B88;&#x62A4;&#x8FDB;&#x7A0B;&#x901A;&#x4FE1;&#xFF08;&#x901A;&#x8FC7;&#x5C01;&#x88C5; REST API&#xFF09;&#x3002;Docker Engine &#x4ECE; CLI &#x4E2D;&#x63A5;&#x53D7; docker &#x547D;&#x4EE4;&#xFF0C;&#x4F8B;&#x5982; docker run <image>&#x3001;docker ps &#x6765;&#x5217;&#x51FA;&#x6B63;&#x5728;&#x8FD0;&#x884C;&#x7684;&#x5BB9;&#x5668;&#x3001;docker images &#x6765;&#x5217;&#x51FA;&#x955C;&#x50CF;&#xFF0C;&#x7B49;&#x7B49;&#x3002;</image></p>
+<p><img src="0xi.Docker%20Machine.assets/engine.png" alt="engine"></p>
+<p>Docker Machine &#x662F;&#x4E00;&#x4E2A;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x548C;&#x7BA1;&#x7406;&#x4F60;&#x7684;&#x5BBF;&#x4E3B;&#x673A;&#xFF08;&#x4E0A;&#x9762;&#x5177;&#x6709; Docker Engine &#x7684;&#x4E3B;&#x673A;&#xFF09;&#x7684;&#x5DE5;&#x5177;&#x3002;&#x901A;&#x5E38;&#xFF0C;&#x4F60;&#x5728;&#x4F60;&#x7684;&#x672C;&#x5730;&#x7CFB;&#x7EDF;&#x4E0A;&#x5B89;&#x88C5; Docker Machine&#x3002;Docker Machine &#x6709;&#x81EA;&#x5DF1;&#x7684;&#x547D;&#x4EE4;&#x884C;&#x5BA2;&#x6237;&#x7AEF; docker-machine &#x548C; Docker Engine &#x5BA2;&#x6237;&#x7AEF; docker&#x3002;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; Machine &#x5728;&#x4E00;&#x4E2A;&#x6216;&#x591A;&#x4E2A;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x4E0A;&#x5B89;&#x88C5; Docker Engine&#x3002;</p>
+<p>&#x8FD9;&#x4E9B;&#x865A;&#x62DF;&#x7CFB;&#x7EDF;&#x53EF;&#x4EE5;&#x662F;&#x672C;&#x5730;&#x7684;&#xFF08;&#x5C31;&#x50CF;&#x4F60;&#x5728; Mac &#x6216; Windows &#x4E0A;&#x4F7F;&#x7528; Machine &#x5728; VirtualBox &#x4E2D;&#x5B89;&#x88C5;&#x548C;&#x8FD0;&#x884C; Docker Engine &#x4E00;&#x6837;&#xFF09;&#x6216;&#x8FDC;&#x7A0B;&#x7684;&#xFF08;&#x5C31;&#x50CF;&#x4F60;&#x4F7F;&#x7528; Machine &#x5728;&#x4E91;&#x63D0;&#x4F9B;&#x5546;&#x4E0A; provision Dockerized &#x5BBF;&#x4E3B;&#x673A;&#x4E00;&#x6837;&#xFF09;&#x3002;Dockerized &#x5BBF;&#x4E3B;&#x673A;&#x672C;&#x8EAB;&#x53EF;&#x4EE5;&#x8BA4;&#x4E3A;&#x662F;&#xFF0C;&#x4E14;&#x6709;&#x65F6;&#x5C31;&#x79F0;&#x4E3A;&#xFF0C;&#x88AB;&#x7BA1;&#x7406;&#x7684; &#x201C;machines&#x201D;&#x3002;</p>
+<p><img src="0xi.Docker%20Machine.assets/machine.png" alt="machine"></p>
+<h2 id="&#x56DB;&#x3001;&#x5B89;&#x88C5;">&#x56DB;&#x3001;&#x5B89;&#x88C5;</h2>
+<p>&#x3000;&#x3000;Docker Mechine &#x53EF;&#x4EE5;&#x5728;&#x591A;&#x79CD;&#x5E73;&#x53F0;&#x4E0A;&#x5B89;&#x88C5;&#x4F7F;&#x7528;&#xFF0C;&#x5305;&#x62EC; Linux &#x3001;MacOS &#x5DF2;&#x7ECF; windows</p>
+<p>&#x3000;&#x3000;Docker Mechine &#x5B89;&#x88C5;&#x975E;&#x5E38;&#x7684;&#x7B80;&#x5355;&#xFF1A;GitHub &#x5730;&#x5740;:<a href="https://github.com/docker/machine/releases/" target="_blank">https://github.com/docker/machine/releases/</a> &#x91CC;&#x9762;&#x6709;&#x5B89;&#x88C5;&#x6559;&#x7A0B; (&#x5728;&#x5199;&#x8FD9;&#x7BC7;&#x6587;&#x7AE0;&#x7684;&#x65F6;&#x5019;&#x6700;&#x65B0;&#x7248;&#x672C;&#x662F; v0.15.0)</p>
+<p>&#x3000;&#x3000;&#x5B89;&#x88C5; Docker Mechine</p>
+<pre><code class="lang-bash">[root@operation ~]<span class="hljs-comment"># curl -L https://github.com/docker/machine/releases/download/v0.15.0/docker-machine-$(uname -s)-$(uname -m) &gt;/tmp/docker-machine</span>
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   617    0   617    0     0    462      0 --:--:--  0:00:01 --:--:--   463
+100 26.8M  100 26.8M    0     0  1000k      0  0:00:27  0:00:27 --:--:-- 1373k
+[root@operation ~]<span class="hljs-comment"># chmod +x /tmp/docker-machine</span>
+[root@operation ~]<span class="hljs-comment"># cp /tmp/docker-machine /usr/local/bin/docker-machine</span>
+
+<span class="hljs-comment"># &#x67E5;&#x770B;&#x7248;&#x672C;&#x786E;&#x8BA4;&#x662F;&#x5426;&#x5B89;&#x88C5;&#x6210;&#x529F;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine -v</span>
+docker-machine version 0.15.0, build b48dc28d
+
+<span class="hljs-comment"># &#x5B89;&#x88C5;&#x81EA;&#x52A8;&#x8865;&#x5168;&#x529F;&#x80FD;</span>
+[root@operation ~]<span class="hljs-comment"># yum -y install bash-completion</span>
+[root@operation ~]<span class="hljs-comment"># scripts=( docker-machine-prompt.bash docker-machine-wrapper.bash docker-machine.bash ); for i in &quot;${scripts[@]}&quot;; do wget https://raw.githubusercontent.com/docker/machine/v0.15.0/contrib/completion/bash/${i} -P /etc/bash_completion.d; done</span>
+
+<span class="hljs-comment"># &#x6DFB;&#x52A0;&#x4EE5;&#x4E0B;</span>
+[root@operation ~]<span class="hljs-comment"># cat ~/.bashrc</span>
+<span class="hljs-comment"># .bashrc</span>
+
+<span class="hljs-comment"># User specific aliases and functions</span>
+
+<span class="hljs-built_in">alias</span> rm=<span class="hljs-string">&apos;rm -i&apos;</span>
+<span class="hljs-built_in">alias</span> cp=<span class="hljs-string">&apos;cp -i&apos;</span>
+<span class="hljs-built_in">alias</span> mv=<span class="hljs-string">&apos;mv -i&apos;</span>
+
+<span class="hljs-comment"># Source global definitions</span>
+<span class="hljs-keyword">if</span> [ <span class="hljs-_">-f</span> /etc/bashrc ]; <span class="hljs-keyword">then</span>
+        . /etc/bashrc
+<span class="hljs-keyword">fi</span>
+
+<span class="hljs-built_in">source</span> /etc/bash_completion.d/docker-machine-wrapper.bash
+<span class="hljs-built_in">source</span> /etc/bash_completion.d/docker-machine-prompt.bash
+<span class="hljs-built_in">source</span> /etc/bash_completion.d/docker-machine.bash
+
+PS1=<span class="hljs-string">&apos;[\u@\h \W$(__docker_machine_ps1)]\$ &apos;</span>
+
+<span class="hljs-comment"># &#x4F7F;&#x4E4B;&#x751F;&#x6548;</span>
+[root@operation ~]<span class="hljs-comment"># source ~/.bashrc</span>
+</code></pre>
+<p>&#x3000;&#x3000;&#x5230;&#x6B64;&#x4F4D;&#x7F6E; docker-machine &#x5C31;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x4E86;&#xFF01;</p>
+<h2 id="&#x4E94;&#x3001;&#x53C2;&#x6570;">&#x4E94;&#x3001;&#x53C2;&#x6570;</h2>
+<p>&#x3000;&#x3000;&#x652F;&#x6301;&#x547D;&#x4EE4;</p>
+<table border="0" data-evernote-id="1515"><tbody data-evernote-id="1820"><tr data-evernote-id="1821"><td data-evernote-id="1517">&#x547D;&#x4EE4;</td><td data-evernote-id="1518">&#x8BF4;&#x660E;</td></tr><tr data-evernote-id="1822"><td data-evernote-id="1519">active</td><td data-evernote-id="1520">&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6FC0;&#x6D3B;&#x72B6;&#x6001;&#x7684; Docker &#x4E3B;&#x673A;</td></tr><tr data-evernote-id="1823"><td data-evernote-id="1521">config</td><td data-evernote-id="1522">&#x67E5;&#x770B;&#x5F53;&#x524D;&#x6FC0;&#x6D3B;&#x72B6;&#x6001; Docker &#x4E3B;&#x673A;&#x7684;&#x8FDE;&#x63A5;&#x4FE1;&#x606F;</td></tr><tr data-evernote-id="1824"><td data-evernote-id="1523">creat</td><td data-evernote-id="1524">&#xA0;&#x521B;&#x5EFA; Docker &#x4E3B;&#x673A;</td></tr><tr data-evernote-id="1825"><td data-evernote-id="1525">env</td><td data-evernote-id="1526">&#x663E;&#x793A;&#x8FDE;&#x63A5;&#x5230;&#x67D0;&#x4E2A;&#x4E3B;&#x673A;&#x9700;&#x8981;&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</td></tr><tr data-evernote-id="1826"><td data-evernote-id="1527">inspect</td><td data-evernote-id="1528">&#x4EE5; json &#x683C;&#x5F0F;&#x8F93;&#x51FA;&#x6307;&#x5B9A; Docker &#x7684;&#x8BE6;&#x7EC6;&#x4FE1;&#x606F;</td></tr><tr data-evernote-id="1827"><td data-evernote-id="1529">ip</td><td data-evernote-id="1530">&#x83B7;&#x53D6;&#x6307;&#x5B9A; Docker &#x4E3B;&#x673A;&#x7684;&#x5730;&#x5740;</td></tr><tr data-evernote-id="1828"><td data-evernote-id="1531">kill</td><td data-evernote-id="1532">&#x76F4;&#x63A5;&#x6740;&#x6B7B;&#x6307;&#x5B9A;&#x7684; Docker &#x4E3B;&#x673A;</td></tr><tr data-evernote-id="1829"><td data-evernote-id="1533">ls</td><td data-evernote-id="1534">&#x5217;&#x51FA;&#x6240;&#x6709;&#x7684;&#x7BA1;&#x7406;&#x4E3B;&#x673A;</td></tr><tr data-evernote-id="1830"><td data-evernote-id="1535">provision</td><td data-evernote-id="1536">&#x91CD;&#x65B0;&#x914D;&#x7F6E;&#x6307;&#x5B9A;&#x4E3B;&#x673A;</td></tr><tr data-evernote-id="1831"><td data-evernote-id="1537">regenerate-certs</td><td data-evernote-id="1538">&#x4E3A;&#x67D0;&#x4E2A;&#x4E3B;&#x673A;&#x91CD;&#x65B0;&#x751F;&#x6210; TLS &#x4FE1;&#x606F;</td></tr><tr data-evernote-id="1832"><td data-evernote-id="1539">restart</td><td data-evernote-id="1540">&#x91CD;&#x542F;&#x6307;&#x5B9A;&#x7684;&#x4E3B;&#x673A;</td></tr><tr data-evernote-id="1833"><td data-evernote-id="1541">rm</td><td data-evernote-id="1542">&#x5220;&#x9664;&#x67D0;&#x53F0; Docker &#x4E3B;&#x673A;&#xFF0C;&#x5BF9;&#x5E94;&#x7684;&#x865A;&#x62DF;&#x673A;&#x4E5F;&#x4F1A;&#x88AB;&#x5220;&#x9664;</td></tr><tr data-evernote-id="1834"><td data-evernote-id="1543">ssh</td><td data-evernote-id="1544">&#x901A;&#x8FC7; SSH &#x8FDE;&#x63A5;&#x5230;&#x4E3B;&#x673A;&#x4E0A;&#xFF0C;&#x6267;&#x884C;&#x547D;&#x4EE4;</td></tr><tr data-evernote-id="1835"><td data-evernote-id="1545">scp</td><td data-evernote-id="1546">&#x5728; Docker &#x4E3B;&#x673A;&#x4E4B;&#x95F4;&#x4EE5;&#x53CA; Docker &#x4E3B;&#x673A;&#x548C;&#x672C;&#x5730;&#x4E3B;&#x673A;&#x4E4B;&#x95F4;&#x901A;&#x8FC7; scp &#x8FDC;&#x7A0B;&#x590D;&#x5236;&#x6570;&#x636E;</td></tr><tr data-evernote-id="1836"><td data-evernote-id="1547">mount</td><td data-evernote-id="1548">&#x4F7F;&#x7528; SSHFS &#x4ECE;&#x8BA1;&#x7B97;&#x673A;&#x88C5;&#x8F7D;&#x6216;&#x5378;&#x8F7D;&#x76EE;&#x5F55;</td></tr><tr data-evernote-id="1837"><td data-evernote-id="1549">start</td><td data-evernote-id="1550">&#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684; Docker &#x4E3B;&#x673A;&#xFF0C;&#x5982;&#x679C;&#x5BF9;&#x8C61;&#x662F;&#x4E2A;&#x865A;&#x62DF;&#x673A;&#xFF0C;&#x8BE5;&#x865A;&#x62DF;&#x673A;&#x5C06;&#x88AB;&#x542F;&#x52A8;</td></tr><tr data-evernote-id="1838"><td data-evernote-id="1551">status</td><td data-evernote-id="1552">&#x83B7;&#x53D6;&#x6307;&#x5B9A; Docker &#x4E3B;&#x673A;&#x7684;&#x72B6;&#x6001; (&#x5305;&#x62EC;&#xFF1A;Running&#x3001;Paused&#x3001;Saved&#x3001;Stopped&#x3001;Stopping&#x3001;Starting&#x3001;Error) &#x7B49;</td></tr><tr data-evernote-id="1839"><td data-evernote-id="1553">stop</td><td data-evernote-id="1554">&#x505C;&#x6B62;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x7684; Docker &#x4E3B;&#x673A;</td></tr><tr data-evernote-id="1840"><td data-evernote-id="1555">upgrade</td><td data-evernote-id="1556">&#x5C06;&#x4E00;&#x4E2A;&#x6307;&#x5B9A;&#x4E3B;&#x673A;&#x7684; Docker &#x7248;&#x672C;&#x66F4;&#x65B0;&#x4E3A;&#x6700;&#x65B0;</td></tr><tr data-evernote-id="1841"><td data-evernote-id="1557">url</td><td data-evernote-id="1558">&#x83B7;&#x53D6;&#x6307;&#x5B9A; Docker &#x4E3B;&#x673A;&#x7684;&#x76D1;&#x542C; URL</td></tr><tr data-evernote-id="1842"><td data-evernote-id="1559">version</td><td data-evernote-id="1560">&#x663E;&#x793A; Docker Machine &#x7684;&#x7248;&#x672C;&#x6216;&#x8005;&#x4E3B;&#x673A; Docker &#x7248;&#x672C;</td></tr><tr data-evernote-id="1843"><td data-evernote-id="1561">help</td><td data-evernote-id="1562">&#x663E;&#x793A;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;</td></tr></tbody></table>
+
+<p>&#x3000;&#x3000;&#x652F;&#x6301;&#x7684;&#x5E73;&#x53F0;&#x53CA;&#x9A71;&#x52A8;&#x5F15;&#x64CE;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5E73;&#x53F0;</span>
+1.&#x5E38;&#x89C4;Linux&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#xFF1B;
+
+2.&#x865A;&#x62DF;&#x5316;&#x5E73;&#x53F0;-VirtualBox&#xFF0C;VMware&#xFF0C;Hyper-V
+
+3.Openstack
+
+4.&#x516C;&#x6709;&#x4E91;-Amazon Web Services&#xFF0C;Microsoft Azure&#xFF0C;Google Compute Engine&#xFF0C;Digital Ocean&#x7B49;
+
+Docker Machine&#x4E3A;&#x8FD9;&#x4E9B;&#x73AF;&#x5883;&#x8D77;&#x4E86;&#x4E00;&#x4E2A;&#x7EDF;&#x4E00;&#x7684;&#x540D;&#x5B57;&#xFF1A;provider
+
+&#x5BF9;&#x4E8E;&#x7279;&#x5B9A;&#x7684;&#x67D0;&#x4E2A;provider&#xFF0C;Docker Machine&#x4F7F;&#x7528;&#x76F8;&#x5E94;&#x7684;driver&#x5B89;&#x88C5;&#x914D;&#x7F6E;docker host
+
+<span class="hljs-comment"># &#x9A71;&#x52A8;&#x5F15;&#x64CE;</span>
+amazonec2
+azure
+digitalocean
+exoscale
+generic
+google
+hyperv
+none
+openstack
+rackspace
+softlayer
+virtualbox
+vmwarevcloudair
+vmwarefusion
+vmwarevsphere
+
+<span class="hljs-comment"># &#x6307;&#x5B9A;&#x65B9;&#x5F0F;</span>
+&#x4F7F;&#x7528;&#x53C2;&#x6570; <span class="hljs-_">-d</span> &#x6216;&#x8005; --driver &#x9A71;&#x52A8;&#x5F15;&#x64CE;&#x540D;&#x79F0;
+</code></pre>
+<p>&#x3000;&#x3000;&#x8BF4;&#x767D;&#x4E86;&#x90FD;&#x662F;&#x865A;&#x62DF;&#x5316;&#x5E73;&#x53F0;&#x548C;&#x4E91;&#x5E73;&#x53F0;&#x7684;&#x9A71;&#x52A8;&#x6587;&#x4EF6;</p>
+<h2 id="&#x516D;&#x3001;&#x4F7F;&#x7528;">&#x516D;&#x3001;&#x4F7F;&#x7528;</h2>
+<p>&#x3000;&#x3000;&#x901A;&#x8FC7; Docker Machine &#x521B;&#x5EFA; docker(&#x6211;&#x7528;&#x4E86;&#x4E24;&#x53F0;&#x673A;&#x5668;)</p>
+<ul>
+<li>192.168.31.43  &#x5B89;&#x88C5; docker machine &#x7684;&#x673A;&#x5668;  &#x4E3B;&#x673A;&#x540D;&#xFF1A;operation</li>
+<li>192.168.31.188  &#x88AB;&#x7BA1;&#x7406;&#x7684;&#x673A;&#x5668;       &#x4E3B;&#x673A;&#x540D;&#xFF1A;client1</li>
+</ul>
+<p>&#x3000;&#x3000;&#x521B;&#x5EFA;&#x6B65;&#x9AA4;&#xFF1A;</p>
+<p>&#x3000;&#x3000;1. &#x914D;&#x7F6E;&#x4E3B;&#x673A;&#x95F4;&#x7684; SSH &#x514D;&#x5BC6; (&#x5728; 192.168.31.43 &#x4E0A;&#x9762;&#x521B;&#x5EFA;)</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x751F;&#x6210;keys&#x5E76;&#x914D;&#x7F6E;&#x53EF;&#x4EE5;&#x514D;&#x5BC6;&#x767B;&#x5F55;&#x4E3B;&#x673A;(&#x8FD9;&#x4E2A;&#x662F;&#x5FC5;&#x987B;&#x8981;&#x505A;&#x7684;)</span>
+[root@operation ~]<span class="hljs-comment"># ssh-keygen</span>
+Generating public/private rsa key pair.
+Enter file <span class="hljs-keyword">in</span> <span class="hljs-built_in">which</span> to save the key (/root/.ssh/id_rsa):
+Created directory <span class="hljs-string">&apos;/root/.ssh&apos;</span>.
+Enter passphrase (empty <span class="hljs-keyword">for</span> no passphrase):
+Enter same passphrase again:
+Your identification has been saved <span class="hljs-keyword">in</span> /root/.ssh/id_rsa.
+Your public key has been saved <span class="hljs-keyword">in</span> /root/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:0Fq7VlowSsDqSStOn4veIoTxFbW2RB059qXMSzLblKg root@operation
+The key<span class="hljs-string">&apos;s randomart image is:
++---[RSA 2048]----+
+|   ...o..o       |
+|    oo o=   .    |
+|   . .*.=* +     |
+|. o .+ *++O      |
+|.= +  +.SBo.     |
+|oo=   E .=o      |
+|+.. .   +        |
+|.ooo   .         |
+|oo.o.            |
++----[SHA256]-----+
+
+# &#x5C06;keys&#x62F7;&#x8D1D;&#x5230;client1&#x4E0A;&#x53BB;
+[root@operation ~]# ssh-copy-id root@192.168.31.188
+/usr/bin/ssh-copy-id: INFO: Source of key(s) to be installed: &quot;/root/.ssh/id_rsa.pub&quot;
+The authenticity of host &apos;</span>192.168.31.188 (192.168.31.188)<span class="hljs-string">&apos; can&apos;</span>t be established.
+ECDSA key fingerprint is SHA256:6MKhx743bCMD3Ay+ELNpKnq1+3/wltcrPhbuyEclZj8.
+ECDSA key fingerprint is MD5:e8:6d:14:7e:41:da:96:4b:2c:92:f8:61:cc:f4:7b:14.
+Are you sure you want to <span class="hljs-built_in">continue</span> connecting (yes/no)? yes
+/usr/bin/ssh-copy-id: INFO: attempting to <span class="hljs-built_in">log</span> <span class="hljs-keyword">in</span> with the new key(s), to filter out any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- <span class="hljs-keyword">if</span> you are prompted now it is to install the new keys
+root@192.168.31.188<span class="hljs-string">&apos;s password:
+
+Number of key(s) added: 1
+
+Now try logging into the machine, with:   &quot;ssh &apos;</span>root@192.168.31.188<span class="hljs-string">&apos;&quot;
+and check to make sure that only the key(s) you wanted were added.
+
+# &#x6D4B;&#x8BD5;&#x662F;&#x5426;&#x53EF;&#x4EE5;&#x514D;&#x5BC6;&#x767B;&#x5F55;
+[root@operation ~]# ssh root@192.168.31.188
+Last login: Fri Oct 12 15:27:45 2018 from 192.168.31.104
+[root@client1 ~]# exit
+</span></code></pre>
+<p>&#x3000;&#x3000;2. &#x4F7F;&#x7528; docker machine &#x521B;&#x5EFA; docker host</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x4F7F;&#x7528;docker machine &#x521B;&#x5EFA;</span>
+<span class="hljs-comment"># &#x5BF9;&#x4E8E;docker machine&#x6765;&#x5C06;&#xFF0C;&#x672F;&#x8BED;Machine&#x5C31;&#x662F;&#x8FD0;&#x884C;docker daemon&#x7684;&#x4E3B;&#x673A;&#xFF0C;&#x521B;&#x5EFA;machine&#x5C31;&#x662F;&#x5728;host&#x4E0A;&#x5B89;&#x88C5;docker</span>
+<span class="hljs-comment"># &#x6267;&#x884C;docker-macine ls&#x67E5;&#x770B;&#x5F53;&#x524D;&#x7684;machine</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine ls</span>
+NAME   ACTIVE   DRIVER   STATE   URL   SWARM   DOCKER   ERRORS
+
+<span class="hljs-comment"># &#x5F53;&#x524D;&#x8FD8;&#x6CA1;&#x6709;&#x4E00;&#x4E2A;machine&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x7B2C;&#x4E00;&#x4E2A;machine&#xFF1A;docker188-192.168.31.188  </span>
+[root@operation ~]<span class="hljs-comment"># docker-machine create --driver generic --generic-ip-address=192.168.31.188 docker188</span>
+Running pre-create checks...
+Creating machine...
+(docker188) No SSH key specified. Assuming an existing key at the default location.
+Waiting <span class="hljs-keyword">for</span> machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting <span class="hljs-keyword">for</span> SSH to be available...
+Detecting the provisioner...
+Provisioning with centos...
+Copying certs to the <span class="hljs-built_in">local</span> machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client to the Docker Engine running on this virtual machine, run: docker-machine env docker188
+
+&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x91CC;&#x4F1A;&#x51FA;&#x73B0;Error creating machine: Error running provisioning: error installing docker:  &#x8FD9;&#x6837;&#x7684;&#x9519;&#x8BEF; &#x539F;&#x56E0;&#x5C31;&#x662F;&#x56E0;&#x4E3A;&#x7F51;&#x7EDC;&#x7684;&#x539F;&#x56E0;&#xFF0C;&#x6CA1;&#x6709;&#x5B89;&#x88C5;docker
+
+<span class="hljs-comment"># &#x521B;&#x5EFA;&#x6210;&#x529F;&#x6267;&#x884C;ls&#x67E5;&#x770B;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine  ls</span>
+NAME        ACTIVE   DRIVER    STATE     URL                         SWARM   DOCKER        ERRORS
+docker188   -        generic   Running   tcp://192.168.31.188:2376           v18.06.1-ce  
+
+<span class="hljs-comment"># &#x767B;&#x5F55;&#x5230;client&#x67E5;&#x770B;&#x914D;&#x7F6E;&#x9879;</span>
+[root@operation ~]<span class="hljs-comment"># ssh root@192.168.31.188</span>
+Last login: Fri Oct 12 16:19:10 2018 from 192.168.31.43
+[root@docker188 ~]<span class="hljs-comment"># cat /etc/systemd/system/docker.service.d/10-machine.conf</span>
+[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H tcp://0.0.0.0:2376 -H unix:///var/run/docker.sock --storage-driver devicemapper --tlsverify --tlscacert /etc/docker/ca.pem --tlscert /etc/docker/server.pem --tlskey /etc/docker/server-key.pem --label provider=generic
+Environment=
+
+&#x6CE8;&#xFF1A;-H tcp://0.0.0.0:2376 &#x4F7F;docker daemon&#x63A5;&#x53D7;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;
+
+      --tls*&#x5BF9;&#x8FDC;&#x7A0B;&#x8FDE;&#x63A5;&#x542F;&#x7528;&#x5B89;&#x5168;&#x8BA4;&#x8BC1;&#x548C;&#x52A0;&#x5BC6;
+
+&#x6CE8;&#xFF1A;&#x5927;&#x5BB6;&#x53EF;&#x80FD;&#x4F1A;&#x53D1;&#x73B0;&#x8FD9;&#x91CC;&#x7684;&#x4E3B;&#x673A;&#x540D;&#x53D8;&#x6210;&#x4E86;docker188 &#x539F;&#x56E0;&#x5C31;&#x662F;docker-machine&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x628A;&#x4E3B;&#x673A;&#x540D;&#x4E5F;&#x4E00;&#x8D77;&#x4FEE;&#x6539;
+
+
+<span class="hljs-comment"># &#x67E5;&#x770B;docker188&#x7684;&#x73AF;&#x5883;&#x53D8;&#x91CF;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine env docker188</span>
+<span class="hljs-built_in">export</span> DOCKER_TLS_VERIFY=<span class="hljs-string">&quot;1&quot;</span>
+<span class="hljs-built_in">export</span> DOCKER_HOST=<span class="hljs-string">&quot;tcp://192.168.31.188:2376&quot;</span>
+<span class="hljs-built_in">export</span> DOCKER_CERT_PATH=<span class="hljs-string">&quot;/root/.docker/machine/machines/docker188&quot;</span>
+<span class="hljs-built_in">export</span> DOCKER_MACHINE_
+<span class="hljs-comment"># Run this command to configure your shell:</span>
+<span class="hljs-comment"># eval $(docker-machine env docker188)</span>
+
+<span class="hljs-comment"># &#x6839;&#x636E;&#x63D0;&#x793A;&#x6267;&#x884C;</span>
+[root@operation ~]<span class="hljs-comment"># eval $(docker-machine env docker188)</span>
+[root@operation ~ [docker188]]<span class="hljs-comment">#</span>
+
+&#x53EF;&#x4EE5;&#x770B;&#x5230;&#xFF0C;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#x53D8;&#x6210;&#x4E86;docker188&#xFF0C;&#x5176;&#x539F;&#x56E0;&#x662F;&#x6211;&#x4EEC;&#x4E4B;&#x524D;&#x5728;/root/.bashrc&#x91CC;&#x9762;&#x914D;&#x7F6E;&#x4E86; PS1=<span class="hljs-string">&apos;[\u@\h \W$(__docker_machine_ps1)]\$ &apos;</span>&#xFF0C;&#x7528;&#x4E8E;&#x663E;&#x793A;&#x5F53;&#x524D;&#x7684;docker host
+&#x6CE8;&#xFF1A;&#x5982;&#x679C;&#x6211;&#x4EEC;&#x8F93;&#x5165;<span class="hljs-built_in">eval</span> $(docker-machine env docker1)&#x6CA1;&#x6709;&#x663E;&#x793A;&#x51FA;docker188&#x7684;&#x547D;&#x4EE4;&#x63D0;&#x793A;&#x7B26;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x91CD;&#x65B0;&#x8F93;&#x5165;&#x4E00;&#x904D; PS1=<span class="hljs-string">&apos;[\u@\h \W$(__docker_machine_ps1)]\$ &apos;</span>
+&#x5728;&#x6B64;&#x72B6;&#x6001;&#x4E0B;&#x6267;&#x884C;&#x7684;docker&#x547D;&#x4EE4;&#x5176;&#x6548;&#x679C;&#x90FD;&#x76F8;&#x5F53;&#x4E8E;&#x5728;docker188&#x4E0A;&#x6267;&#x884C;
+
+[root@operation ~ [docker188]]<span class="hljs-comment"># docker ps</span>
+CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+[root@operation ~ [docker188]]<span class="hljs-comment"># docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+</code></pre>
+<p>&#x3000;&#x3000;3. &#x5176;&#x4ED6;&#x547D;&#x4EE4;&#x64CD;&#x4F5C;</p>
+<pre><code class="lang-bash"><span class="hljs-comment"># &#x5176;&#x4ED6;&#x547D;&#x4EE4;</span>
+<span class="hljs-comment"># create &#x547D;&#x4EE4;</span>
+&#x9009;&#x9879;&#x5305;&#x62EC;&#xFF1A;
+&#xB7;--driver&#xFF0C;<span class="hljs-_">-d</span><span class="hljs-string">&quot;none&quot;</span>                             &#x6307;&#x5B9A;&#x9A71;&#x52A8;&#x7C7B;&#x578B;&#xFF1B;
+&#xB7;--engine-install-url<span class="hljs-string">&quot;https://get.docker.com&quot;</span>   &#x914D;&#x7F6E;Dokcer&#x4E3B;&#x673A;&#x65F6;&#x5019;&#x7684;&#x5B89;&#x88C5;URL&#xFF1B;
+&#xB7;--engine-opt option                            &#x4EE5;&#x952E;&#x503C;&#x5BF9;&#x683C;&#x5F0F;&#x6307;&#x5B9A;&#x6240;&#x521B;&#x5EFA;Docker&#x5F15;&#x64CE;&#x7684;&#x53C2;&#x6570;&#xFF1B;
+&#xB7;--engine-insecure-registry option              &#x4EE5;&#x952E;&#x503C;&#x5BF9;&#x683C;&#x5F0F;&#x6307;&#x5B9A;&#x6240;&#x521B;&#x5EFA;Docker&#x5F15;&#x64CE;&#x5141;&#x8BB8;&#x8BBF;&#x95EE;&#x7684;&#x4E0D;&#x652F;&#x6301;&#x8BA4;&#x8BC1;&#x7684;&#x6CE8;&#x518C;&#x4ED3;&#x5E93;&#x670D;&#x52A1;&#xFF1B;
+&#xB7;--engine-registry-mirror option                &#x6307;&#x5B9A;&#x4F7F;&#x7528;&#x6CE8;&#x518C;&#x4ED3;&#x5E93;&#x955C;&#x50CF;&#xFF1B;
+&#xB7;--engine-label option                          &#x4E3A;&#x6240;&#x521B;&#x5EFA;&#x7684;Docker&#x5F15;&#x64CE;&#x6DFB;&#x52A0;&#x6807;&#x7B7E;&#xFF1B;
+&#xB7;--engine-storage-driver                        &#x5B58;&#x50A8;&#x540E;&#x7AEF;&#x9A71;&#x52A8;&#x7C7B;&#x578B;&#xFF1B;
+&#xB7;--engine-env option                            &#x6307;&#x5B9A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#xFF1B;
+&#xB7;--swarm                                        &#x6307;&#x5B9A;&#x4F7F;&#x7528;Swarm&#xFF1B;
+&#xB7;--swarm-image<span class="hljs-string">&quot;swarm&#xFF1A;latest&quot;</span>                   &#x4F7F;&#x7528;Swarm&#x65F6;&#x5019;&#x91C7;&#x7528;&#x7684;&#x955C;&#x50CF;&#xFF1B;
+&#xB7;--swarm-master                                 &#x914D;&#x7F6E;&#x673A;&#x5668;&#x4F5C;&#x4E3A;Swarm&#x96C6;&#x7FA4;&#x7684;master&#x8282;&#x70B9;&#xFF1B;
+&#xB7;--swarm-discovery                              Swarm&#x96C6;&#x7FA4;&#x7684;&#x670D;&#x52A1;&#x53D1;&#x73B0;&#x673A;&#x5236;&#x53C2;&#x6570;&#xFF1B;
+&#xB7;--swarm-strategy<span class="hljs-string">&quot;spread&quot;</span>                       Swarm&#x9ED8;&#x8BA4;&#x8C03;&#x5EA6;&#x7B56;&#x7565;&#xFF1B;
+&#xB7;--swarm-opt option                             &#x4EFB;&#x610F;&#x4F20;&#x9012;&#x7ED9;Swarm&#x7684;&#x53C2;&#x6570;&#xFF1B;
+&#xB7;--swarm-host<span class="hljs-string">&quot;tcp://0.0.0.0&#xFF1A;3376&quot;</span>              &#x6307;&#x5B9A;&#x5730;&#x5740;&#x5C06;&#x76D1;&#x542C; Swarm master&#x8282;&#x70B9;&#x8BF7;&#x6C42;&#xFF1B;
+&#xB7;--swarm-addr                                   &#x4ECE;&#x6307;&#x5B9A;&#x5730;&#x5740;&#x53D1;&#x9001;&#x5E7F;&#x64AD;&#x52A0;&#x5165;Swarm&#x96C6;&#x7FA4;&#x670D;&#x52A1;&#x3002;
+
+&#x5B9E;&#x4F8B;&#xFF1A;
+docker-machine create <span class="hljs-_">-d</span> virtualbox \
+--engine-storage-driver overlay \
+--engine-label name=testmachine \
+--engine-label year=2018 \
+--engine-opt dns=8.8.8.8 \
+--engine-env HTTP_PROXY=http://proxy.com:3128 \
+--engine-insecure-registry registry.private.com \
+mydockermachine
+
+
+<span class="hljs-comment"># active&#x547D;&#x4EE4;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine ls</span>
+NAME        ACTIVE   DRIVER    STATE     URL                         SWARM   DOCKER        ERRORS
+docker188   -        generic   Running   tcp://192.168.31.188:2376           v18.06.1-ce  
+
+<span class="hljs-comment"># &#x8FD9;&#x91CC;&#x7684;&#x72B6;&#x6001;&#x662F;&#x6CA1;&#x6709;&#x88AB;&#x6FC0;&#x6D3B;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine env docker188</span>
+<span class="hljs-built_in">export</span> DOCKER_TLS_VERIFY=<span class="hljs-string">&quot;1&quot;</span>
+<span class="hljs-built_in">export</span> DOCKER_HOST=<span class="hljs-string">&quot;tcp://192.168.31.188:2376&quot;</span>                           <span class="hljs-comment"># &#x6FC0;&#x6D3B;&#x4E3B;&#x673A;</span>
+<span class="hljs-built_in">export</span> DOCKER_CERT_PATH=<span class="hljs-string">&quot;/root/.docker/machine/machines/docker188&quot;</span>
+<span class="hljs-built_in">export</span> DOCKER_MACHINE_
+<span class="hljs-comment"># Run this command to configure your shell:</span>
+<span class="hljs-comment"># eval $(docker-machine env docker188)</span>
+
+[root@operation ~]<span class="hljs-comment"># export DOCKER_HOST=&quot;tcp://192.168.31.188:2376&quot;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine ls</span>
+NAME        ACTIVE   DRIVER    STATE     URL                         SWARM   DOCKER        ERRORS
+docker188   *        generic   Running   tcp://192.168.31.188:2376           v18.06.1-ce  
+[root@operation ~]<span class="hljs-comment"># docker-machine active</span>
+docker188
+
+<span class="hljs-comment"># config&#x547D;&#x4EE4;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine config docker188</span>
+--tlsverify
+--tlscacert=<span class="hljs-string">&quot;/root/.docker/machine/machines/docker188/ca.pem&quot;</span>
+--tlscert=<span class="hljs-string">&quot;/root/.docker/machine/machines/docker188/cert.pem&quot;</span>
+--tlskey=<span class="hljs-string">&quot;/root/.docker/machine/machines/docker188/key.pem&quot;</span>
+-H=tcp://192.168.31.188:2376
+
+<span class="hljs-comment"># inspect&#x547D;&#x4EE4;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine inspect docker188</span>
+{
+    <span class="hljs-string">&quot;ConfigVersion&quot;</span>: 3,
+    <span class="hljs-string">&quot;Driver&quot;</span>: {
+        <span class="hljs-string">&quot;IPAddress&quot;</span>: <span class="hljs-string">&quot;192.168.31.188&quot;</span>,
+        <span class="hljs-string">&quot;MachineName&quot;</span>: <span class="hljs-string">&quot;docker188&quot;</span>,
+        <span class="hljs-string">&quot;SSHUser&quot;</span>: <span class="hljs-string">&quot;root&quot;</span>,
+        <span class="hljs-string">&quot;SSHPort&quot;</span>: 22,
+        <span class="hljs-string">&quot;SSHKeyPath&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;StorePath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine&quot;</span>,
+        <span class="hljs-string">&quot;SwarmMaster&quot;</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-string">&quot;SwarmHost&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;SwarmDiscovery&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;EnginePort&quot;</span>: 2376,
+        <span class="hljs-string">&quot;SSHKey&quot;</span>: <span class="hljs-string">&quot;&quot;</span>
+    },
+    <span class="hljs-string">&quot;DriverName&quot;</span>: <span class="hljs-string">&quot;generic&quot;</span>,
+    <span class="hljs-string">&quot;HostOptions&quot;</span>: {
+        <span class="hljs-string">&quot;Driver&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+        <span class="hljs-string">&quot;Memory&quot;</span>: 0,
+        <span class="hljs-string">&quot;Disk&quot;</span>: 0,
+        <span class="hljs-string">&quot;EngineOptions&quot;</span>: {
+            <span class="hljs-string">&quot;ArbitraryFlags&quot;</span>: [],
+            <span class="hljs-string">&quot;Dns&quot;</span>: null,
+            <span class="hljs-string">&quot;GraphDir&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;Env&quot;</span>: [],
+            <span class="hljs-string">&quot;Ipv6&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;InsecureRegistry&quot;</span>: [],
+            <span class="hljs-string">&quot;Labels&quot;</span>: [],
+            <span class="hljs-string">&quot;LogLevel&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;StorageDriver&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;SelinuxEnabled&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;TlsVerify&quot;</span>: <span class="hljs-literal">true</span>,
+            <span class="hljs-string">&quot;RegistryMirror&quot;</span>: [],
+            <span class="hljs-string">&quot;InstallURL&quot;</span>: <span class="hljs-string">&quot;https://get.docker.com&quot;</span>
+        },
+        <span class="hljs-string">&quot;SwarmOptions&quot;</span>: {
+            <span class="hljs-string">&quot;IsSwarm&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;Address&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;Discovery&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;Agent&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;Master&quot;</span>: <span class="hljs-literal">false</span>,
+            <span class="hljs-string">&quot;Host&quot;</span>: <span class="hljs-string">&quot;tcp://0.0.0.0:3376&quot;</span>,
+            <span class="hljs-string">&quot;Image&quot;</span>: <span class="hljs-string">&quot;swarm:latest&quot;</span>,
+            <span class="hljs-string">&quot;Strategy&quot;</span>: <span class="hljs-string">&quot;spread&quot;</span>,
+            <span class="hljs-string">&quot;Heartbeat&quot;</span>: 0,
+            <span class="hljs-string">&quot;Overcommit&quot;</span>: 0,
+            <span class="hljs-string">&quot;ArbitraryFlags&quot;</span>: [],
+            <span class="hljs-string">&quot;ArbitraryJoinFlags&quot;</span>: [],
+            <span class="hljs-string">&quot;Env&quot;</span>: null,
+            <span class="hljs-string">&quot;IsExperimental&quot;</span>: <span class="hljs-literal">false</span>
+        },
+        <span class="hljs-string">&quot;AuthOptions&quot;</span>: {
+            <span class="hljs-string">&quot;CertDir&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/certs&quot;</span>,
+            <span class="hljs-string">&quot;CaCertPath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/certs/ca.pem&quot;</span>,
+            <span class="hljs-string">&quot;CaPrivateKeyPath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/certs/ca-key.pem&quot;</span>,
+            <span class="hljs-string">&quot;CaCertRemotePath&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;ServerCertPath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/machines/docker188/server.pem&quot;</span>,
+            <span class="hljs-string">&quot;ServerKeyPath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/machines/docker188/server-key.pem&quot;</span>,
+            <span class="hljs-string">&quot;ClientKeyPath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/certs/key.pem&quot;</span>,
+            <span class="hljs-string">&quot;ServerCertRemotePath&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;ServerKeyRemotePath&quot;</span>: <span class="hljs-string">&quot;&quot;</span>,
+            <span class="hljs-string">&quot;ClientCertPath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/certs/cert.pem&quot;</span>,
+            <span class="hljs-string">&quot;ServerCertSANs&quot;</span>: [],
+            <span class="hljs-string">&quot;StorePath&quot;</span>: <span class="hljs-string">&quot;/root/.docker/machine/machines/docker188&quot;</span>
+        }
+    },
+    <span class="hljs-string">&quot;Name&quot;</span>: <span class="hljs-string">&quot;docker188&quot;</span>
+}
+
+
+<span class="hljs-comment"># ssh&#x547D;&#x4EE4;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine ssh docker188 docker images</span>
+REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
+alpine              latest              196d12cf6ab1        4 weeks ago         4.41MB
+
+[root@operation ~]<span class="hljs-comment"># docker-machine ssh docker188   </span>
+Last login: Fri Oct 12 16:36:49 2018 from 192.168.31.43
+[root@docker188 ~]<span class="hljs-comment">#</span>
+
+<span class="hljs-comment"># url&#x547D;&#x4EE4;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine url docker188                  </span>
+tcp://192.168.31.188:2376
+
+<span class="hljs-comment"># status&#x547D;&#x4EE4;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine status docker188</span>
+Running
+
+<span class="hljs-comment"># version&#x547D;&#x4EE4;</span>
+[root@operation ~]<span class="hljs-comment"># docker-machine version docker188</span>
+18.06.1-ce
+</code></pre>
+<p>&#x3000;&#x3000;&#x6CE8;&#xFF1A;&#x8FD8;&#x6709;&#x4E00;&#x4E9B;&#x547D;&#x4EE4;&#x5C31;&#x4E0D;&#x4E00;&#x4E00;&#x5217;&#x51FA;&#x4E86;&#xFF0C;&#x53EF;&#x4EE5;&#x67E5;&#x770B;&#x4E0A;&#x9762;&#x7684;&#x53C2;&#x6570;&#x547D;&#x4EE4;&#x8868;&#xFF0C;&#x5177;&#x4F53;&#x547D;&#x4EE4;&#x7684;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#x53EF;&#x4EE5;&#x901A;&#x8FC7; --help &#x67E5;&#x770B;</p>
+<p>&#x3000;&#x3000;&#x6CE8;&#xFF1A;Machine &#x5B89;&#x88C5; docker &#x73AF;&#x5883;&#x4E2D;&#x4F1A;&#x56E0;&#x7F51;&#x7EDC;&#x6216;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#x9020;&#x6210;&#x5B89;&#x88C5;&#x5931;&#x8D25;&#xFF0C;&#x4F7F;&#x7528;&#x4E2D;&#x53D1;&#x73B0;&#xFF0C;&#x8FD9;&#x79CD;&#x5B89;&#x88C5;&#x5931;&#x8D25;&#x9891;&#x7387;&#x5F88;&#x9AD8;&#xFF0C;&#x611F;&#x89C9;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x7684;&#x4EF7;&#x503C;&#xFF0C;&#x8BF4;&#x767D;&#x4E86;&#xFF0C;&#x4E00;&#x4E2A;&#x516C;&#x53F8;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x4E00;&#x822C;&#x4E0D;&#x4F1A;&#x8D85;&#x8FC7;&#x4E24;&#x4E2A;&#x53D1;&#x884C;&#x7248;&#xFF0C;&#x5199;&#x4E2A;&#x811A;&#x672C;&#x4E00;&#x952E;&#x5B89;&#x88C5;&#x4E5F;&#x8BB8;&#x4F1A;&#x66F4;&#x65B9;&#x4FBF;&#xFF01;</p>
+<h2 id="&#x4E03;&#x3001;&#x603B;&#x7ED3;">&#x4E03;&#x3001;&#x603B;&#x7ED3;</h2>
+<p>Docker Machine &#x6700;&#x4E3B;&#x8981;&#x6709;&#x4E24;&#x4E2A;&#x4F5C;&#x7528;&#xFF1A;</p>
+<ul>
+<li>&#x4F7F;&#x7528; Docker Machine &#x65B9;&#x4FBF;&#x5728;&#x4E0D;&#x540C;&#x7684;&#x73AF;&#x5883;&#x4E2D;&#x4F7F;&#x7528; Docker &#xFF0C;&#x6BD4;&#x5982;&#xFF1A;Win/Mac</li>
+<li>&#x4F7F;&#x7528; Docker Machine &#x65B9;&#x4FBF;&#x5728;&#x4E91;&#x73AF;&#x5883;&#x4E0B;&#x6279;&#x91CF;&#x90E8;&#x7F72; Docker &#x73AF;&#x5883;&#xFF0C;&#x6BD4;&#x5982;&#xFF1A;&#x79C1;&#x6709;&#x4E91;&#xFF0C;&#x516C;&#x6709;&#x4E91;&#x6279;&#x91CF;&#x5B89;&#x88C5; Docker &#x73AF;&#x5883;</li>
+</ul>
+<h2 id="&#x516B;&#x3001;&#x53C2;&#x8003;&#x94FE;&#x63A5;">&#x516B;&#x3001;&#x53C2;&#x8003;&#x94FE;&#x63A5;</h2>
+<p>&#x5B98;&#x65B9;&#x5730;&#x5740;&#xFF1A;<a href="https://docs.docker.com/machine/" target="_blank">https://docs.docker.com/machine/</a></p>
+<p>&#x5B98;&#x65B9;&#x9A71;&#x52A8;&#x8BE6;&#x7EC6;&#x4F7F;&#x7528;&#x65B9;&#x6CD5;&#xFF1A;<a href="https://docs.docker.com/machine/drivers/" target="_blank">https://docs.docker.com/machine/drivers/</a></p>
+<p>&#x53C2;&#x8003;&#x6587;&#x6863;&#xFF1A;<a href="https://www.cnblogs.com/lkun/p/7781157.html" target="_blank">https://www.cnblogs.com/lkun/p/7781157.html</a></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="0xh.Docker_Compose.html" class="navigation navigation-prev " aria-label="Previous page: 0xh.Docker Compose">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="0xj.Docker_Swarm.html" class="navigation navigation-next " aria-label="Next page: 0xj.Docker Swarm">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"0xi.Docker Machine","level":"1.2.9","depth":2,"next":{"title":"0xj.Docker Swarm","level":"1.2.10","depth":2,"path":"Docker/0xj.Docker_Swarm.md","ref":"Docker/0xj.Docker_Swarm.md","articles":[]},"previous":{"title":"0xh.Docker Compose","level":"1.2.8","depth":2,"path":"Docker/0xh.Docker_Compose.md","ref":"Docker/0xh.Docker_Compose.md","articles":[]},"dir":"ltr"},"config":{"plugins":["page-toc","-lunr","-search","search-pro","code","back-to-top-button","splitter","expandable-chapters","chapter-fold"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"chapter-fold":{},"splitter":{},"search-pro":{},"page-toc":{"position":"top","selector":".markdown-section h1, .markdown-section h2, .markdown-section h3, .markdown-section h4","showByDefault":true},"code":{"copyButtons":true},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"back-to-top-button":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"expandable-chapters":{}},"theme":"default","author":"cn-xiao","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"工程师笔记","language":"zh-hans","output.name":"site","gitbook":"3.2.3"},"file":{"path":"Docker/0xi.Docker_Machine.md","mtime":"2023-12-01T06:09:08.837Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2023-12-01T06:24:57.365Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/anchor-3.1.1.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-page-toc/page-toc.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search-pro/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-back-to-top-button/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-splitter/splitter.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-chapter-fold/chapter-fold.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
